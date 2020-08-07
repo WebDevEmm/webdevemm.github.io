@@ -1,0 +1,16 @@
+//  HELPERS
+@import "../0-helpers/helpers-dir";
+//  TOOLS
+@import "../1-tools/tools-dir";
+//  BASE
+@import "../2-base/base-dir";
+
+h1 {
+  margin: 0;
+}
+
+#b2t {
+  background: green;
+  position: sticky;
+  bottom: 0;
+}

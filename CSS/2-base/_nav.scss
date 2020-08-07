@@ -1,0 +1,46 @@
+@import "../0-helpers/variables";
+
+.nav--bg {
+  background: $cBlue;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0px 5px 10px 0px;
+  z-index: 2;
+}
+
+#main--nav {
+  background: $cBlue;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+
+  .gkg {
+    font-size: 1.4rem;
+    justify-self: center;
+    align-self: center;
+  }
+
+  ul {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+  }
+  @include anchor();
+}
+
+#bottom--nav {
+  display: inline-flex;
+  justify-self: flex-end;
+  position: absolute;
+  position: sticky;
+  bottom: 0;
+  margin: 0 0 0 calc(100% - 4rem);
+  @include svg--a();
+}

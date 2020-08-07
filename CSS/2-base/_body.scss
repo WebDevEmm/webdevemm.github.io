@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: $cBlue;
+}
+
+.gkg {
+  color: $cCafe-5;
+  font-family: forum;
+}
+h1 {
+  font-size: 4rem;
+  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
+}
+h2 {
+  font-size: 2.5rem;
+  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
+}
+p {
+  margin: 1em 3rem;
+  color: $cEgg-1;
+}

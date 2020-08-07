@@ -1,0 +1,43 @@
+.main-header {
+  display: grid;
+  // grid-template-columns: repeat(2, minmax(1fr, 1fr));
+  grid-template-rows: 1fr fit-content;
+  justify-content: center;
+  position: relative;
+
+  .gkg--lrg {
+    display: inline;
+    font-size: 6rem;
+    margin: 3rem 0rem;
+    text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
+  }
+  p {
+    bottom: 30px;
+    font-size: 1.3rem;
+    width: 600px;
+  }
+}
+
+.header--icons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-size: 2em;
+  top: 0;
+  right: 0;
+  margin: 3rem 2rem;
+  @include svg--a;
+}
+.flex--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  h1 {
+    width: 50%;
+  }
+
+  img {
+    width: 321px;
+  }
+}
