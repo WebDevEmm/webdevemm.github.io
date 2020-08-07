@@ -1,8 +1,8 @@
 # GKG
 
-This is the website for the Gold Key Group realtors from Revolution Realty
+## This is the website for the Gold Key Group realtors from Revolution Realty
 
-The files contained are as follows:
+## The files contained are as follows:
 
 # CSS
 
