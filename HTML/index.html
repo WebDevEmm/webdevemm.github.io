@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GKG-Prop</title>
+    <title>Gold Key Group</title>
     <link rel="stylesheet" href="../CSS/main/main.css" />
     <script
       src="https://kit.fontawesome.com/76fa9a81bb.js"
@@ -47,10 +47,10 @@
       <nav id="main--nav">
         <h3 class="gkg">GKG</h3>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="../HTML/index.html#home">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Search</a></li>
+          <li><a href="../HTML/search.html" target="_blank">Search</a></li>
         </ul>
       </nav>
     </div>
@@ -65,66 +65,80 @@
           <p class="form--header">
             Fill up this form to set up an appointment:
           </p>
-          <!--  FIRST COLUMN START -->
-          <div class="form--1col">
-            <!-- ### NAME ### -->
-            <label for="name">Name:</label>
-            <br />
-            <input
-              type="text"
-              id="name"
-              placeholder="First and last name"
-              required
-            />
-            <br />
-            <br />
-            <!-- ### PHONE NUMBER ### -->
-            <label for="phone">Phone number:</label>
-            <br />
-            <input
-              type="tel"
-              id="phone"
-              placeholder="(111)-222-3333"
-              required
-            />
-            <br />
-            <br />
-            <!-- ### E-MAIL ### -->
-            <label for="email">E-mail:</label>
-            <br />
-            <input
-              type="email"
-              id="email"
-              placeholder="eamil@example.com"
-              required
-            />
-            <br />
+          <div class="form--data">
+            <!--  FIRST COLUMN START -->
+            <div class="form--1col">
+              <!-- ### NAME ### -->
+              <label for="name">Name:</label>
+              <br />
+              <input
+                type="text"
+                id="name"
+                placeholder="First and last name"
+                required
+              />
+              <br />
+              <br />
+              <!-- ### PHONE NUMBER ### -->
+              <label for="phone">Phone number:</label>
+              <br />
+              <input
+                type="tel"
+                id="phone"
+                placeholder="(111)-222-3333"
+                required
+              />
+              <br />
+              <br />
+              <!-- ### E-MAIL ### -->
+              <label for="email">E-mail:</label>
+              <br />
+              <input
+                type="email"
+                id="email"
+                placeholder="eamil@example.com"
+                required
+              />
+              <br />
+            </div>
+            <!--  FIRST COLUMN END -->
+            <!-- SECOND COLUMN START -->
+            <div class="form--2col">
+              <!-- ### DATE ### -->
+              <label for="date">
+                Speify a date for us to call you:
+              </label>
+              <br />
+              <input type="date" id="date" min="2020-06-08" max="2020-12-31" />
+              <br />
+              
+              <!-- ### MESSAGE ### -->
+              <label for="message">Include a message (optional): <br /> </label>
+              <br />
+              <textarea
+                name="message"
+                id="message"
+                cols="40"
+                rows="12"
+              ></textarea>
+              <br />
+            </div>
+            <!-- SECOND COLUMN END -->
+            <!-- THIRD COLUMN START -->
+            <div class="form--3col">
+              <!-- ### MESSAGE ### -->
+              <!-- <label for="message">Include a message (optional): <br /> </label
+              ><br />
+              <textarea
+                name="message"
+                id="message"
+                cols="45"
+                rows="12"
+              ></textarea>
+              <br /> -->
+            </div>
+            <!-- THIRD COLUMN END -->
           </div>
-          <!--  FIRST COLUMN END -->
-          <!-- SECOND COLUMN START -->
-          <div class="form--2col">
-            <!-- ### DATE ### -->
-            <label for="date">
-              Speify a date for us to call you:
-            </label>
-            <br />
-            <input type="date" id="date" min="2020-06-08" max="2020-12-31" />
-          </div>
-          <!-- SECOND COLUMN END -->
-          <!-- THIRD COLUMN START -->
-          <div class="form--3col">
-            <!-- ### MESSAGE ### -->
-            <label for="message">Include a message (optional): <br /> </label
-            ><br />
-            <textarea
-              name="message"
-              id="message"
-              cols="45"
-              rows="12"
-            ></textarea>
-            <br />
-          </div>
-          <!-- THIRD COLUMN END -->
           <!-- FORM FOOTER START-->
           <div class="form--footer">
             <p>
@@ -139,6 +153,7 @@
         <!-- /// FORM END /// -->
       </div>
     </section>
+
     <!-- SECOND SCREEN /// FORM /// END -->
     <!-- THIRD SCREEN START -->
     <section class="screen third--screen">
@@ -153,7 +168,7 @@
               <br />
               E-mail: <br />
               <a
-                href="mailto:mariazendejasrealestate@gmail.com?subject=xxxx!&body=xxxxx"
+                href="mailto:mariazendejasrealestate@gmail.com?subject=I'm&nbsp;contacting&nbsp;you&nbsp;from&nbsp;your&nbsp;website!&body=I'd&nbsp;like&nbsp;to:&nbsp;buy/rent/sell."
                 target="_blank"
                 >mariazendejasrealestate@gmail.com</a
               ><br />
@@ -182,7 +197,6 @@
             </p>
           </div>
         </div>
-      </div>
     </section>
     <!-- THIRD SCREEN END -->
     <!-- BACK TO TOP NAV START -->

@@ -10,19 +10,39 @@
     margin: 1rem 0;
     font-size: 2rem;
   }
+
+  // FORM
+
   form {
     display: grid;
     margin: 3rem;
     padding: 2rem;
-    grid-template-columns: repeat(3, minmax(fitcontent, 33%));
+    // grid-template-columns: repeat(3, minmax(fitcontent, 33%));
     grid-template-rows: repeat(3, fitcontent);
     background: $cSand-3;
     font-weight: bold;
     font-size: 1.5rem;
     color: $cBlue;
 
+    .form--text--input {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      padding-bottom: 0px;
+      padding-top: 20px;
+      border: none;
+    }
+    .form--label--text {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    // FORM HEADER
     .form--header {
-      grid-column: 1/3;
+      grid-column: 1/-1;
       grid-row: 1/2;
       justify-items: center;
       align-items: center;
@@ -39,28 +59,37 @@
         color: $cBlue;
       }
     }
-    .form--1col {
-      @extend .form--header;
-      // padding: 0.5rem;
-      grid-column: 1/2;
-      grid-row: 2/3;
+    // FORM DATA
+    .form--data {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .form--1col {
+        // @extend .form--header;
+
+        grid-row: 2/3;
+      }
+      .form--2col {
+        grid-row: 2/3;
+        // @extend .form--2col;
+      }
+      .form--3col {
+        grid-row: 2/3;
+        // @extend .form--2col;
+      }
     }
-    .form--2col {
-      @extend .form--2col;
-      grid-column: 2/3;
-    }
-    .form--3col {
-      @extend .form--2col;
-      grid-column: 3/4;
-    }
+    // FORM FOOTER
     .form--footer {
       @extend .form--header;
-      grid-column: 1/3;
+      grid-column: 1/-1;
       grid-row: 3/4;
       font-style: italic;
       overflow-wrap: break-word;
     }
   }
+
+  // AGENTS
+
   .agents {
     display: flex;
     justify-content: space-evenly;
