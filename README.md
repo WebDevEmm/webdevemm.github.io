@@ -1,33 +1,33 @@
 # GKG
 
-This is the website for the Gold Key Group realtors from Revolution Realty
+## This is the website for the Gold Key Group realtors from Revolution Realty
 
-The files contained are as follows:
+## The files contained are as follows:
 
 # CSS
 
-0-helpers
-  
- Contains all basic tools that consitute the code of the page
-ie. Variables, Mixins, etc.
+    0-helpers
 
-1-tools
+        Contains all basic tools that consitute the code of the page
+          ie. Variables, Mixins, etc.
 
-    Will contain plug ins, js, etc.
+    1-tools
 
-2-base
+        Will contain plug ins, js, etc.
 
-    Contains all the basic elements that show how the page looks.
-      ie. Screens, Headers, Footer, etc.
+    2-base
+
+        Contains all the basic elements that show how the page looks.
+          ie. Screens, Headers, Footer, etc.
 
 # Fonts
 
-Contains all fonts used on the website.
+    Contains all fonts used on the website.
 
 # HTML
 
-Contains all the HTML files.
+    Contains all the HTML files.
 
 # Images
 
-Contains all images used on the website.
+    Contains all images used on the website.
