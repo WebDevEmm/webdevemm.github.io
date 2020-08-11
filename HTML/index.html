@@ -55,46 +55,54 @@
       </nav>
     </div>
     <!-- TOP NAVBAR END -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
     <!-- SECOND SCREEN /// FORM /// START -->
     <section class="screen second--screen">
       <div class="content">
         <h1 class="gkg">Contact us</h1>
         <p>Before you buy or sell, contact us us for a free consultation!</p>
         <!-- /// FORM /// -->
-        <form action="#" method="post" class="contact--form">
+        <form action="#" method="post" class="contact--form" id="form--contact--us">
           <p class="form--header">
-            Fill up this form to set up an appointment:
+            To set up an appointment please fill up this form:
           </p>
           <div class="form--data">
             <!--  FIRST COLUMN START -->
             <div class="form--1col">
+
               <!-- ### NAME ### -->
               <label for="name">Name:</label>
               <br />
               <input
                 type="text"
+                name="name"
                 id="name"
                 placeholder="First and last name"
                 required
               />
               <br />
               <br />
+
               <!-- ### PHONE NUMBER ### -->
               <label for="phone">Phone number:</label>
               <br />
               <input
                 type="tel"
+                name="phone"
                 id="phone"
                 placeholder="(111)-222-3333"
                 required
               />
               <br />
               <br />
+
               <!-- ### E-MAIL ### -->
               <label for="email">E-mail:</label>
               <br />
               <input
                 type="email"
+                name="email"
                 id="email"
                 placeholder="eamil@example.com"
                 required
@@ -104,41 +112,58 @@
             <!--  FIRST COLUMN END -->
             <!-- SECOND COLUMN START -->
             <div class="form--2col">
-              <!-- ### DATE ### -->
-              <label for="date">
-                Speify a date for us to call you:
-              </label>
-              <br />
-              <input type="date" id="date" min="2020-06-08" max="2020-12-31" />
-              <br />
-              
+
               <!-- ### MESSAGE ### -->
-              <label for="message">Include a message (optional): <br /> </label>
+              <label for="message">Include a message (optional):  </label>
+              <br />
               <br />
               <textarea
                 name="message"
+                name="message"
                 id="message"
+                form="form--contact--us"
                 cols="40"
                 rows="12"
+                style="resize: none;"
               ></textarea>
               <br />
             </div>
             <!-- SECOND COLUMN END -->
             <!-- THIRD COLUMN START -->
             <div class="form--3col">
-              <!-- ### MESSAGE ### -->
-              <!-- <label for="message">Include a message (optional): <br /> </label
-              ><br />
-              <textarea
-                name="message"
-                id="message"
-                cols="45"
-                rows="12"
-              ></textarea>
-              <br /> -->
+
+
+              <!-- ### DATE ### -->
+              <label for="date">
+                When should we call you:
+              </label>
+              <br />
+              <input type="date" name="date" id="date" min="2020-06-08" max="2020-12-31" />
+              <br />
+              <br />
+              <!-- CHANGE "x" "y" "z" -->
+              <div class="form--time">
+                <label for="time">What's the best time to call:</label>
+                <br />
+                <input type="radio" name="time" id="xxxx" value="xxxx" >
+                <label for="time1">xxxx</label>
+                <br>
+                <input type="radio" name="time" id="yyyy" value="yyyy">
+                <label for="time2">yyyy</label>
+                <br>
+                <input type="radio" name="time" id="zzzz" value="zzzz">
+                <label for="time3">zzzz</label>
+                <br>
+                <input type="radio" name="time" id="time4" value="true" checked>
+                <label for="time4">Any time</label>
+              </div>
+              <br />
             </div>
             <!-- THIRD COLUMN END -->
           </div>
+          <!-- SUBMIT START -->
+          <input type="submit" id="submit" value="Submit">
+          <!-- SUBMIT END -->
           <!-- FORM FOOTER START-->
           <div class="form--footer">
             <p>

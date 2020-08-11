@@ -64,25 +64,32 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      .form--1col {
-        // @extend .form--header;
 
+      .form--1col {
         grid-row: 2/3;
+        margin: 1rem;
+        // @extend .form--header;
       }
       .form--2col {
         grid-row: 2/3;
-        // @extend .form--2col;
+        @extend .form--1col;
       }
       .form--3col {
         grid-row: 2/3;
-        // @extend .form--2col;
+        @extend .form--1col;
       }
+    }
+    // SUBMIT
+    #submit {
+      width: fit-content;
+      padding: 1rem;
+      justify-self: center;
     }
     // FORM FOOTER
     .form--footer {
       @extend .form--header;
       grid-column: 1/-1;
-      grid-row: 3/4;
+      grid-row: 4/5;
       font-style: italic;
       overflow-wrap: break-word;
     }

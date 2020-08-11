@@ -368,10 +368,11 @@ section {
           justify-content: space-evenly;
 }
 
-.content form .form--data .form--1col {
+.content form .form--data .form--1col, .content form .form--data .form--2col, .content form .form--data .form--3col {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  margin: 1rem;
 }
 
 .content form .form--data .form--2col {
@@ -386,11 +387,20 @@ section {
   grid-row: 2/3;
 }
 
+.content form #submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .content form .form--footer {
   grid-column: 1/-1;
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-row: 4/5;
   font-style: italic;
   overflow-wrap: break-word;
 }
