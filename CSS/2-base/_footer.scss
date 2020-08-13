@@ -1,3 +1,33 @@
 footer {
-  background: $cSand-3;
+  position: relative;
+  background: $cSand-3 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  height: 30vh;
+  color: $cBlue;
+  // box-shadow: 0px -5px 20px 0px;
+
+  a {
+    margin: 0;
+  }
+
+  .footer--b--icons {
+    @include svg--a(0.5rem, 2rem);
+    // a:link,
+    // a:visited {
+    //   color: $cBlue;
+    // }
+    // a:hover,
+    // a:active,
+    // a:focus {
+    //   color: ;
+    // }
+  }
+
+  .copy {
+    display: inline;
+    position: absolute;
+    font-weight: bold;
+    margin: 0.5rem;
+    bottom: 0;
+    right: 0;
+  }
 }
