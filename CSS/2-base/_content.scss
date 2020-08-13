@@ -18,27 +18,11 @@
     margin: 3rem;
     padding: 2rem;
     // grid-template-columns: repeat(3, minmax(fitcontent, 33%));
-    grid-template-rows: repeat(3, fitcontent);
+    grid-template-rows: repeat(3, fit-content);
     background: $cSand-3;
     font-weight: bold;
     font-size: 1.5rem;
     color: $cBlue;
-
-    .form--text--input {
-      position: relative;
-      height: 50px;
-      width: 100%;
-      padding-bottom: 0px;
-      padding-top: 20px;
-      border: none;
-    }
-    .form--label--text {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
 
     // FORM HEADER
     .form--header {
@@ -65,18 +49,8 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
 
-      .form--1col {
-        grid-row: 2/3;
+      .form--col {
         margin: 1rem;
-        // @extend .form--header;
-      }
-      .form--2col {
-        grid-row: 2/3;
-        @extend .form--1col;
-      }
-      .form--3col {
-        grid-row: 2/3;
-        @extend .form--1col;
       }
     }
     // SUBMIT
@@ -94,6 +68,10 @@
       overflow-wrap: break-word;
     }
   }
+  .form--time--option {
+    font-weight: lighter;
+    font-size: large;
+  }
 
   // AGENTS
 
@@ -104,8 +82,12 @@
     text-align: center;
     font-size: 1.5rem;
     @include anchor();
+
     position .agent {
-      position: initial;
+      display: flex;
+      flex-flow: column;
+      text-justify: auto;
+      width: 40vw;
     }
 
     h2 {

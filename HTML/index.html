@@ -11,28 +11,25 @@
     ></script>
   </head>
   <!-- BODY START -->
-  <body class="grid">
+  <body>
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
     <!-- FIRST SCREEN / HEADER START -->
-    <section class="first--screen">
-      <header class="main-header">
-        <div class="flex--container">
-          <h1 class="gkg gkg--lrg">
-            GOLD <br />
-            KEY <br />
-            GROUP
-          </h1>
-          <div class="header--icons">
-            <a href="#home">
-              <svg class="fas fa-home"></svg>
-            </a>
-            <a href="#">
-              <svg class="fas fa-envelope"></svg>
-            </a>
-            <a href="#">
-              <svg class="fas fa-phone"></svg>
-            </a>
+    <section class="first--screen" id="home">
+      <header class="main--header">
+        <div class="header--flex">
+          <div class="header--col">
+            <h1 class="gkg gkg--lrg">
+              GOLD <br />
+              KEY <br />
+              GROUP
+            </h1>
+            <br>
+            <p>We speak <em><a href="#ENG" title="Click to translate">English</a></em> & <em><a href="#ESP" title="Click to translate">Spanish</a></em> !</p>
           </div>
-          <img src="../Images/b2b-2.png" alt="Our Real Estate Agents" />
+          <div class="header--col">
+            <img src="#" alt="" />
+          </div>
         </div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum in
@@ -40,16 +37,41 @@
           quisquam soluta. Quae sit expedita recusandae inventore.
         </p>
       </header>
+      <div class="header--b--icons">
+        <a href="https://www.facebook.com/goldkeyorlando/">
+          <svg class="fab fa-facebook-f"></svg>
+        </a>
+        <a href="#">
+          <svg class="fab fa-instagram"></svg>
+        </a>
+        <a href="#">
+          <svg class="fab fa-twitter"></svg>
+        </a>
+      </div>
+      <div class="header--icons">
+        <a href="../HTML/index.html#home">
+          <svg class="fas fa-home"></svg>
+        </a>
+        <a href="#">
+          <svg class="fas fa-envelope"></svg>
+        </a>
+        <a href="#">
+          <svg class="fas fa-phone"></svg>
+        </a>
+      </div>
+
     </section>
     <!-- FIRST SCREEN / HEADER END -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
     <!-- TOP NAVBAR START -->
-    <div class="nav--bg" id="home">
+    <div class="nav--bg">
       <nav id="main--nav">
         <h3 class="gkg">GKG</h3>
         <ul>
           <li><a href="../HTML/index.html#home">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="../HTML/index.html#about">About</a></li>
+          <li><a href="../HTML/index.html#contact">Contact</a></li>
           <li><a href="../HTML/search.html" target="_blank">Search</a></li>
         </ul>
       </nav>
@@ -57,10 +79,75 @@
     <!-- TOP NAVBAR END -->
 <!-- ####################################################################### -->
 <!-- ####################################################################### -->
-    <!-- SECOND SCREEN /// FORM /// START -->
-    <section class="screen second--screen">
+    <!-- SECOND SCREEN /// BLOG /// START -->
+    <section class="screen">
       <div class="content">
-        <h1 class="gkg">Contact us</h1>
+        <h1 class="gkg" id="blog">Blogs</h1>
+
+      </div>
+    </section>
+    <!-- SECOND SCREEN /// BLOG /// END -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <!-- THIRD SCREEN /// FORM /// START -->
+    <section class="screen">
+      <div class="content">
+        <h1 class="gkg" id="about">Meet our agents:</h1>
+        <div class="agents">
+          <div class="agent">
+            <h2 class="gkg">Maria Zendejas</h2>
+            <img src="#" alt="" />
+            <address>
+              Cellphone: 
+              <br>
+              <a href="tel:407-913-0154" title="Call Maria">(407)-913-0154</a> 
+              <br />
+              <br />
+              E-mail: 
+              <br />
+              <a
+                href="mailto:mariazendejasrealestate@gmail.com?subject=I'm&nbsp;contacting&nbsp;you&nbsp;from&nbsp;your&nbsp;website!&body=I'd&nbsp;like&nbsp;to:&nbsp;buy/rent/sell."
+                target="_blank" title="Send an e-mail to Maria"
+                >mariazendejasrealestate@gmail.com</a
+              >
+              <br />
+            </address>
+            <p class="bio bio--m">
+              I am never too busy for your referrals! Let me provide your
+              friends and family with the finest real estate services. Before
+              they buy or sell, have them call me for a free consultation.
+            </p>
+          </div>
+          <div class="agent">
+            <h2 class="gkg">Paula Correa</h2>
+            <img src="#" alt="" />
+            <address>
+              Cellphone: 
+              <br>
+              <a href="tel:407-668-9070" title="Call Paula">(407)-668-9070</a> 
+              <br />
+              <br />
+              E-mail: 
+              <br />
+              <a href="mailto:paulacorreare@gmail.com" target="_blank"
+                title="Send an e-mail to Paula">paulacorreare@gmail.com</a
+              ><br />
+            </address>
+            <p class="bio">
+              I am never too busy for your referrals! Let me provide your
+              friends and family with the finest real estate services. Before
+              they buy or sell, have them call me for a free consultation.
+            </p>
+          </div>
+        </div>
+    </section>
+    <!-- THIRD SCREEN /// FORM /// END -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+    <!-- FOURTH SCREEN START -->
+    <section class="screen">
+      <div class="content" >
+        <h1 class="gkg" id="contact">Contact us</h1>
         <p>Before you buy or sell, contact us us for a free consultation!</p>
         <!-- /// FORM /// -->
         <form action="#" method="post" class="contact--form" id="form--contact--us">
@@ -69,7 +156,7 @@
           </p>
           <div class="form--data">
             <!--  FIRST COLUMN START -->
-            <div class="form--1col">
+            <div class="form--col">
 
               <!-- ### NAME ### -->
               <label for="name">Name:</label>
@@ -111,8 +198,37 @@
             </div>
             <!--  FIRST COLUMN END -->
             <!-- SECOND COLUMN START -->
-            <div class="form--2col">
-
+            <div class="form--col">
+              <!-- ### DATE ### -->
+              <label for="date">
+                When should we call you:
+              </label>
+              <br />
+              <input type="date" name="date" id="date" min="2020-08-06" max="2020-12-31" />
+              <br />
+              <br />
+              <!-- ### TIME ### -->
+              <div class="form--time">
+                <label for="time">Best time to call:</label>
+                <br />
+                <input type="radio" name="time" id="morning"  value="morning" >
+                <label for="time1" class="form--time--option">Morning</label>
+                <br>
+                <input type="radio" name="time" id="afternoon"  value="afternoon">
+                <label for="time2" class="form--time--option">Afternoon</label>
+                <br>
+                <input type="radio" name="time" id="evening"  value="evening">
+                <label for="time3" class="form--time--option">Evening</label>
+                <br>
+                <input type="radio" name="time" id="time4"  value="true" checked>
+                <label for="time4" class="form--time--option">Any time</label>
+              </div>
+              <br />
+              
+            </div>
+            <!-- SECOND COLUMN END -->
+            <!-- THIRD COLUMN START -->
+            <div class="form--col">
               <!-- ### MESSAGE ### -->
               <label for="message">Include a message (optional):  </label>
               <br />
@@ -126,37 +242,6 @@
                 rows="12"
                 style="resize: none;"
               ></textarea>
-              <br />
-            </div>
-            <!-- SECOND COLUMN END -->
-            <!-- THIRD COLUMN START -->
-            <div class="form--3col">
-
-
-              <!-- ### DATE ### -->
-              <label for="date">
-                When should we call you:
-              </label>
-              <br />
-              <input type="date" name="date" id="date" min="2020-06-08" max="2020-12-31" />
-              <br />
-              <br />
-              <!-- CHANGE "x" "y" "z" -->
-              <div class="form--time">
-                <label for="time">What's the best time to call:</label>
-                <br />
-                <input type="radio" name="time" id="xxxx" value="xxxx" >
-                <label for="time1">xxxx</label>
-                <br>
-                <input type="radio" name="time" id="yyyy" value="yyyy">
-                <label for="time2">yyyy</label>
-                <br>
-                <input type="radio" name="time" id="zzzz" value="zzzz">
-                <label for="time3">zzzz</label>
-                <br>
-                <input type="radio" name="time" id="time4" value="true" checked>
-                <label for="time4">Any time</label>
-              </div>
               <br />
             </div>
             <!-- THIRD COLUMN END -->
@@ -178,57 +263,15 @@
         <!-- /// FORM END /// -->
       </div>
     </section>
-
-    <!-- SECOND SCREEN /// FORM /// END -->
-    <!-- THIRD SCREEN START -->
-    <section class="screen third--screen">
-      <div class="content">
-        <h1 class="gkg">Meet our agents:</h1>
-        <div class="agents">
-          <div class="agent">
-            <h2 class="gkg">Maria Zendejas</h2>
-            <img src="#" alt="" />
-            <address>
-              Cellphone: <a href="tel:407-913-0154">(407)-913-0154</a> <br />
-              <br />
-              E-mail: <br />
-              <a
-                href="mailto:mariazendejasrealestate@gmail.com?subject=I'm&nbsp;contacting&nbsp;you&nbsp;from&nbsp;your&nbsp;website!&body=I'd&nbsp;like&nbsp;to:&nbsp;buy/rent/sell."
-                target="_blank"
-                >mariazendejasrealestate@gmail.com</a
-              ><br />
-            </address>
-            <p class="bio bio--m">
-              I am never too busy for your referrals! Let me provide your
-              friends and family with the finest real estate services. Before
-              they buy or sell, have them call me for a free consultation.
-            </p>
-          </div>
-          <div class="agent">
-            <h2 class="gkg">Paula Correa</h2>
-            <img src="#" alt="" />
-            <address>
-              Cellphone: <a href="tel:407-668-9070">(407)-668-9070</a> <br />
-              <br />
-              E-mail: <br />
-              <a href="mailto:paulacorreare@gmail.com" target="_blank"
-                >paulacorreare@gmail.com</a
-              ><br />
-            </address>
-            <p class="bio">
-              I am never too busy for your referrals! Let me provide your
-              friends and family with the finest real estate services. Before
-              they buy or sell, have them call me for a free consultation.
-            </p>
-          </div>
-        </div>
-    </section>
-    <!-- THIRD SCREEN END -->
+    
+    <!-- FOURTH SCREEN END -->
     <!-- BACK TO TOP NAV START -->
     <nav id="bottom--nav">
       <a href="#top"><svg class="fas fa-arrow-circle-up"></svg></a>
     </nav>
     <!-- BACK TO TOP NAV END -->
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
     <!-- FOOTER START -->
     <footer>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat,
