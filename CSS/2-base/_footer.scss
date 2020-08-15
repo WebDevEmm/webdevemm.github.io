@@ -5,28 +5,30 @@ footer {
   color: $cBlue;
   // box-shadow: 0px -5px 20px 0px;
 
+  p {
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+    color: $cBlue;
+  }
+
   a {
     margin: 0;
   }
 
   .footer--b--icons {
     @include svg--a(0.5rem, 2rem);
-    // a:link,
-    // a:visited {
-    //   color: $cBlue;
-    // }
-    // a:hover,
-    // a:active,
-    // a:focus {
-    //   color: ;
-    // }
+    @include ds;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
   }
 
   .copy {
     display: inline;
     position: absolute;
     font-weight: bold;
-    margin: 0.5rem;
+    // margin: 0.5rem;
     bottom: 0;
     right: 0;
   }
