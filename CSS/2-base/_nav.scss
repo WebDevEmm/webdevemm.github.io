@@ -1,19 +1,18 @@
 @import "../0-helpers/variables";
 
-.nav--bg {
+#top--nav {
   background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   position: sticky;
   top: 0;
-  bottom: 0;
   box-shadow: 0px 5px 10px 0px;
   z-index: 2;
-  height: 12vh;
+  height: 80px;
 }
 
 #main--nav {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   @include anchor();
 
@@ -39,10 +38,34 @@
 #bottom--nav {
   display: inline-flex;
   justify-self: flex-end;
-  position: absolute;
   position: sticky;
   bottom: 0;
-  margin: 0 0 0 calc(100% - 4rem);
   @include svg--a(1rem, 2rem);
   @include ds;
+}
+
+#nav--icons {
+  // display: inline-flex;
+  // justify-self: flex-end;
+  // position: sticky;
+  // top: 0;
+  // right: 1rem;
+  // margin-top: 80px;
+  background: $cBlue;
+  box-shadow: none;
+  display: none;
+  flex-direction: column;
+  position: sticky;
+  top: 90px;
+  // position: sticky;
+  // top: 0;
+  z-index: 1;
+  justify-content: flex-end;
+
+  //BOTTOM NAV OPTIONS
+  // bottom: 0px;
+  // margin-top: 100px;
+
+  @include svg--a(1rem, 3rem);
+  // @include ds;
 }

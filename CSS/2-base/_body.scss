@@ -29,6 +29,14 @@ body {
   }
 }
 
+main {
+  max-width: 80vw;
+
+  h1 {
+    padding-top: 100px;
+  }
+}
+
 .gkg {
   color: $cCafe-5;
   font-family: forum;
@@ -36,21 +44,22 @@ body {
 
 h1 {
   font-size: 4rem;
-  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
 }
 
 h2 {
   font-size: 2.5rem;
-  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
 }
 
 h3 {
   font-size: 2rem;
-  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
 }
 
 .egg--p {
   color: $cEgg-1;
+}
+
+.ts {
+  text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
 }
 
 .title--a {

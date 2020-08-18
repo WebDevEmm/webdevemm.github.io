@@ -1,13 +1,15 @@
 @import "../0-helpers/_variables";
 
 section {
-  min-height: 100vh;
+  min-height: 640px;
   max-height: fit-content;
 }
+
 .screen {
   display: grid;
   grid-template-columns: 10vw 80vw 10vw;
   margin-bottom: 2rem;
+  margin-top: -100px;
 }
 
 .first--screen {
@@ -23,7 +25,7 @@ section {
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
     background-attachment: sticky;
-    clip-path: polygon(0 35vh, 100% 60%, 100% 100%, 0 100%);
+    clip-path: polygon(0 calc(100% - 80%), 100% 40%, 100% 100%, 0 100%);
     top: 0;
     z-index: -1;
     height: 100%;

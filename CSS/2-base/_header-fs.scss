@@ -1,7 +1,6 @@
 .main--header {
   display: grid;
   grid-template-rows: repeat(2, minmax(fit-content, 455px));
-  grid-template-columns: repeat(autofit, minmax(200px, 1fr));
   justify-content: center;
   position: relative;
 
@@ -15,6 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
+  padding-top: 1.5rem;
 
   .header--col {
     @include anchor;
@@ -36,7 +36,7 @@
     }
 
     img {
-      margin-left: 1rem;
+      margin: 1.5rem 0 1.5rem 1.5rem;
     }
   }
 }
@@ -74,7 +74,7 @@
   background: white;
   bottom: 1rem;
   right: 1rem;
-  width: 20%;
+  width: 200px;
   margin: 0;
   padding: 0.5rem;
 }
