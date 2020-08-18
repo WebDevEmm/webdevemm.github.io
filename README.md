@@ -1,4 +1,4 @@
-# GKG
+# GKG 2.0
 
 ## This is the website for the Gold Key Group realtors from Revolution Realty
 
