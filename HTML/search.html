@@ -11,7 +11,7 @@
       name="keywords"
       content="buy house, sell house, buy home, sell home, orlando, florida, realtor, realty, stellar mls, revolution realty, new construction, windermere, winter garden, florida home investment"
     />
-    <title>Gold Key Group - Search for a Home</title>
+    <title>Search for a house in Orlando | Gold Key Group</title>
 
     <link rel="stylesheet" href="../CSS/main/main.css" />
     <link rel="shortcut icon" type="image/ico" href="../Images/favicon.ico" />
@@ -22,51 +22,90 @@
     ></script>
   </head>
   <!-- BODY START -->
-  <body class="grid">
-    <!-- FIRST SCREEN / HEADER START -->
-    <section class="first--screen">
-      <header class="main-header">
+  <body>
+    <!-- ####################################################################### -->
+    <!-- ####################################################################### -->
+    <!-- HEADER SCREEN START -->
+    <section class="first--screen" id="search">
+      <header class="alt--header">
         <div class="header--flex">
-          <h1 class="gkg gkg--lrg">
-            GOLD <br />
-            KEY <br />
-            GROUP
-          </h1>
-          <div class="header--icons">
-            <a href="#home">
-              <svg class="fas fa-home"></svg>
-            </a>
-            <a href="#">
-              <svg class="fas fa-envelope"></svg>
-            </a>
-            <a href="#">
-              <svg class="fas fa-phone"></svg>
-            </a>
+          <div class="header--col c1">
+            <h1 class="gkg gkg--lrg ts">
+              Search houses
+            </h1>
+            <br />
+            <br />
+            <p class="egg--p">
+              Translate to:
+              <em><a href="#ENG" title="Click to translate">English</a></em> or
+              <em><a href="#ESP" title="Click to translate">Spanish</a></em>
+            </p>
           </div>
-          <img src="../Images/b2b-2.png" alt="Our Real Estate Agents" />
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum in
-          amet dignissimos earum vel officia exercitationem hic delectus
-          quisquam soluta. Quae sit expedita recusandae inventore.
+        <p class="egg--p" id="header--text">
+          Looking to
+          <b>buy</b>
+          a house in
+          <b>Florida</b>
+          ?
+          <br />
+          This is the right place!
         </p>
       </header>
+      <div class="header--icons">
+        <a href="../HTML/index.html#home">
+          <svg class="fas fa-home"></svg>
+        </a>
+        <a
+          href="mailto:mariazendejas@gmail.com, paulacorreare@gmail.com?subject=Inquiry%20from%20your%20website%20&body=Hello!%0D%0A%0D%0AMy%20name%20is%3A%20%0D%0AMy%20phone%20number%20is%3A%20%0D%0AThe%20best%20time%20to%20call%20me%20is%20at%3A%20%0D%0AI'd%20like%20to%20(%20BUY%20%2F%20SELL%20)%20a%20house%20on%20ZIP%20code%3A%20%0D%0A%0D%0A(For%20buying%20fill%20this%20as%20well%2C%20please)%0D%0A%0D%0AMy%20price%20range%20for%20buying%20is%3A%20%0D%0AMinimum%20sq%20feet%3A%0D%0ABeds%3A%20%0D%0A%0D%0A(Please%20edit%20this%20template%20to%20fit%20your%20inquiry%20or%20delete%20the%20fields%20and%20type%20in%20your%20message)"
+          target="_blank"
+        >
+          <svg class="fas fa-envelope"></svg>
+        </a>
+        <a href="../HTML/index.html#phone--numbers">
+          <svg class="fas fa-phone"></svg>
+        </a>
+      </div>
+      <div class="header--b--icons">
+        <a href="https://www.facebook.com/goldkeyorlando/" target="_blank">
+          <svg class="fab fa-facebook-f"></svg>
+        </a>
+        <a href="https://www.instagram.com/goldkey_orlando/" target="_blank">
+          <i class="fab fa-instagram fa-fw"></i>
+        </a>
+        <a href="#" target="_blank">
+          <svg class="fab fa-twitter"></svg>
+        </a>
+      </div>
+      <img
+        src="../Images/Revolution Realty.png"
+        alt="Revolution Realty"
+        class="rr--logo bs"
+      />
     </section>
-    <!-- FIRST SCREEN / HEADER END -->
+    <!-- HEADER SCREEN END -->
+    <!-- ####################################################################### -->
+    <!-- ####################################################################### -->
     <!-- TOP NAVBAR START -->
-    <div class="nav--bg">
+    <div id="top--nav">
       <nav id="main--nav">
-        <h3 class="gkg">GKG</h3>
+        <h3 class="gkg"><a href="index.html">GKG</a></h3>
         <ul>
-          <li><a href="../HTML/index.html#homeHome">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="../HTML/index.html#blogs--in--main">Blogs</a></li>
+          <li><a href="../HTML/index.html#phone--numbers">About us</a></li>
+          <li><a href="../HTML/index.html#why--us">Why us</a></li>
+          <li><a href="../HTML/index.html#contact">Contact</a></li>
+          <li><a href="../HTML/search.html" target="_blank">SEARCH</a></li>
+          <li><a href="../HTML/sell.html" id="sell--home">SELL</a></li>
         </ul>
       </nav>
     </div>
+
     <!-- TOP NAVBAR END -->
+    <!-- ####################################################################### -->
+    <!-- ####################################################################### -->
     <!-- SECOND SCREEN START -->
-    <section class="screen second--screen">
+    <section class="screen">
       <div class="content">
         <div
           class="mls--search"
@@ -74,11 +113,12 @@
         >
           <iframe
             src="https://stellar.mlsmatrix.com/Matrix/public/IDX.aspx?idx=e3175684"
-            width="100%"
-            height="100%"
+            width="70%"
+            height="80%"
             frameborder="0"
             marginwidth="0"
             marginheight="0"
+            style="border-radius: 10px; margin: 100px; justify-content: center;"
           ></iframe>
         </div>
       </div>

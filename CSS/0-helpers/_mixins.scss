@@ -29,8 +29,8 @@
       left: 0;
       bottom: -8px;
       width: 100%;
-      transform-origin: right;
       height: 2px;
+      transform-origin: right;
       transition: transform 250ms ease-in;
     }
   }
@@ -49,12 +49,6 @@
 @mixin anchor--alt {
   a:link,
   a:visited {
-    // .blog--title {
-
-    // }
-    // .blog--p {
-
-    // }
     position: relative;
     text-decoration: none;
     z-index: 1;
@@ -62,24 +56,42 @@
     // transform: scaleY(0.9);
     width: 90%;
     height: 90%;
+
+    .blog--title {
+      padding: 1rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: currentColor;
+        z-index: -1;
+        height: 4px;
+        bottom: 8px;
+        left: -100px;
+        width: 850px;
+
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 350ms ease-in;
+      }
+    }
   }
+
   a:hover,
   a:active,
   a:focus {
     .blog--title {
-      padding: 1rem;
-      font-size: 2.5rem;
+      &::after {
+        transform: scaleX(1);
+      }
     }
     .blog--p {
       padding: 1.2rem 1.2rem 1.2rem 220px;
-      border: 6px solid $cCafe-5;
-    }
-    .blog--img {
-      border: 6px solid $cCafe-5;
     }
     // background: rgba(0, 0, 0, 1), $cSand-3;
     // box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
     outline: none;
+    position: relative;
     // transform: scaleX(1);
     // transform: scaleY(1);
     width: 95%;

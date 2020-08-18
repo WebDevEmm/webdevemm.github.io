@@ -88,7 +88,7 @@ h3 {
   text-decoration: none;
 }
 
-.main--header {
+.main--header, .alt--header {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (minmax(fit-content, 455px))[2];
@@ -100,8 +100,15 @@ h3 {
   position: relative;
 }
 
-.main--header p {
+.main--header p, .alt--header p {
   font-size: 1.3rem;
+}
+
+.alt--header {
+  -ms-grid-rows: minmax(fit-content, 455px);
+      grid-template-rows: minmax(-webkit-fit-content, 455px);
+      grid-template-rows: minmax(fit-content, 455px);
+  max-height: 400px;
 }
 
 .header--flex {
@@ -135,9 +142,9 @@ h3 {
   left: 0;
   bottom: -8px;
   width: 100%;
+  height: 2px;
   -webkit-transform-origin: right;
           transform-origin: right;
-  height: 2px;
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
   transition: transform 250ms ease-in;
@@ -294,9 +301,9 @@ h3 {
   left: 0;
   bottom: -8px;
   width: 100%;
+  height: 2px;
   -webkit-transform-origin: right;
           transform-origin: right;
-  height: 2px;
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
   transition: transform 250ms ease-in;
@@ -503,32 +510,51 @@ section {
   height: 90%;
 }
 
+.content .blog--flex a:link .blog--title,
+.content .blog--flex a:visited .blog--title {
+  padding: 1rem;
+}
+
+.content .blog--flex a:link .blog--title::after,
+.content .blog--flex a:visited .blog--title::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  z-index: -1;
+  height: 4px;
+  bottom: 8px;
+  left: -100px;
+  width: 850px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 350ms ease-in;
+  transition: -webkit-transform 350ms ease-in;
+  transition: transform 350ms ease-in;
+  transition: transform 350ms ease-in, -webkit-transform 350ms ease-in;
+}
+
 .content .blog--flex a:hover,
 .content .blog--flex a:active,
 .content .blog--flex a:focus {
   outline: none;
+  position: relative;
   width: 95%;
   height: 95%;
 }
 
-.content .blog--flex a:hover .blog--title,
-.content .blog--flex a:active .blog--title,
-.content .blog--flex a:focus .blog--title {
-  padding: 1rem;
-  font-size: 2.5rem;
+.content .blog--flex a:hover .blog--title::after,
+.content .blog--flex a:active .blog--title::after,
+.content .blog--flex a:focus .blog--title::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .content .blog--flex a:hover .blog--p,
 .content .blog--flex a:active .blog--p,
 .content .blog--flex a:focus .blog--p {
   padding: 1.2rem 1.2rem 1.2rem 220px;
-  border: 6px solid #a67a62;
-}
-
-.content .blog--flex a:hover .blog--img,
-.content .blog--flex a:active .blog--img,
-.content .blog--flex a:focus .blog--img {
-  border: 6px solid #a67a62;
 }
 
 .content .blog--flex .blog--box {
@@ -545,10 +571,13 @@ section {
 }
 
 .content .blog--flex .blog--box .blog--img {
-  border-radius: 10px;
+  position: relative;
   margin: auto;
+  border-radius: 10px;
   width: 80%;
-  max-height: 100%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -559,6 +588,7 @@ section {
 
 .content .blog--flex .blog--box .blog--title {
   position: absolute;
+  display: block;
   font-weight: bolder;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -716,9 +746,9 @@ section {
   left: 0;
   bottom: -8px;
   width: 100%;
+  height: 2px;
   -webkit-transform-origin: right;
           transform-origin: right;
-  height: 2px;
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
   transition: transform 250ms ease-in;
@@ -786,9 +816,9 @@ section {
   left: 0;
   bottom: -8px;
   width: 100%;
+  height: 2px;
   -webkit-transform-origin: right;
           transform-origin: right;
-  height: 2px;
   -webkit-transition: -webkit-transform 250ms ease-in;
   transition: -webkit-transform 250ms ease-in;
   transition: transform 250ms ease-in;
@@ -816,7 +846,7 @@ section {
   color: #2a283f;
   background: #d0baa7;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .content .why--us {
@@ -904,8 +934,8 @@ img {
 }
 
 .bs {
-  -webkit-box-shadow: 0px 0px 20px 5px;
-          box-shadow: 0px 0px 20px 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px;
+          box-shadow: 0px 0px 10px 1px;
 }
 
 @media (max-width: 790px) {

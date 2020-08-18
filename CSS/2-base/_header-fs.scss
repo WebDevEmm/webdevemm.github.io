@@ -9,6 +9,12 @@
   }
 }
 
+.alt--header {
+  @extend .main--header;
+  grid-template-rows: minmax(fit-content, 455px);
+  max-height: 400px;
+}
+
 .header--flex {
   display: flex;
   flex-wrap: wrap;
