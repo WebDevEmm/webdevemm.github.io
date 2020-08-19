@@ -19,6 +19,38 @@
     font-size: 2rem;
   }
 
+  h1.gkg {
+    position: relative;
+    padding-bottom: 1.5rem;
+    box-shadow: 0px 10px 0px -5px currentColor;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $cBlue;
+      z-index: -1;
+      width: 60px;
+      height: 30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: currentColor;
+      z-index: -2;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -15px;
+      transform: rotate(45deg);
+    }
+  }
   // BLOGS
 
   .blog--flex {
@@ -151,16 +183,16 @@
 
   .agents {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 1.5rem;
     @include anchor();
 
     position .agent {
       display: flex;
-      flex-flow: column;
       text-justify: auto;
+      flex-flow: column;
       width: 40vw;
     }
 
@@ -171,6 +203,7 @@
     img {
       margin: 2rem 0;
       background: white;
+      border-radius: 15px;
     }
 
     address {
@@ -179,11 +212,24 @@
       line-height: 2rem;
     }
     .bio {
+      font-style: italic;
+      position: relative;
       width: 400px;
       color: $cBlue;
       background: $cSand-3;
-      border-radius: 10px;
-      padding: 2rem;
+      border-radius: 20px;
+      padding: 1.5em 1em;
+      &::before {
+        content: open-quote;
+        font-size: 3rem;
+        color: rgba(50, 50, 50, 0.8);
+      }
+      &::after {
+        content: close-quote;
+        position: absolute;
+        font-size: 3rem;
+        color: rgba(50, 50, 50, 0.8);
+      }
     }
   }
 

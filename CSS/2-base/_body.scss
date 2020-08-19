@@ -40,6 +40,10 @@ main {
 .gkg {
   color: $cCafe-5;
   font-family: forum;
+  &::selection {
+    color: $cEgg-1;
+    background: $cCafe-5;
+  }
 }
 
 h1 {

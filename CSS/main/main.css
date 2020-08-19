@@ -64,6 +64,16 @@ main h1 {
   font-family: forum;
 }
 
+.gkg::-moz-selection {
+  color: #f1ead4;
+  background: #a67a62;
+}
+
+.gkg::selection {
+  color: #f1ead4;
+  background: #a67a62;
+}
+
 h1 {
   font-size: 4rem;
 }
@@ -485,6 +495,42 @@ section {
   font-size: 2rem;
 }
 
+.content h1.gkg {
+  position: relative;
+  padding-bottom: 1.5rem;
+  -webkit-box-shadow: 0px 10px 0px -5px currentColor;
+          box-shadow: 0px 10px 0px -5px currentColor;
+  z-index: 1;
+}
+
+.content h1.gkg::before {
+  content: "";
+  position: absolute;
+  background: #2a283f;
+  z-index: -1;
+  width: 60px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.content h1.gkg::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  z-index: -2;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .content .blog--flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,13 +556,11 @@ section {
   height: 90%;
 }
 
-.content .blog--flex a:link .blog--title,
-.content .blog--flex a:visited .blog--title {
+.content .blog--flex a:focus .blog--title {
   padding: 1rem;
 }
 
-.content .blog--flex a:link .blog--title::after,
-.content .blog--flex a:visited .blog--title::after {
+.content .blog--flex a:focus .blog--title::after {
   content: "";
   position: absolute;
   background: currentColor;
@@ -525,8 +569,8 @@ section {
   bottom: 8px;
   left: -100px;
   width: 850px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transition: -webkit-transform 350ms ease-in;
@@ -719,11 +763,11 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -775,11 +819,11 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-justify: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  text-justify: auto;
   width: 40vw;
 }
 
@@ -791,6 +835,7 @@ section {
 .content .agents img {
   margin: 2rem 0;
   background: white;
+  border-radius: 15px;
 }
 
 .content .agents address {
@@ -842,11 +887,26 @@ section {
 }
 
 .content .agents .bio {
+  font-style: italic;
+  position: relative;
   width: 400px;
   color: #2a283f;
   background: #d0baa7;
-  border-radius: 10px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 1.5em 1em;
+}
+
+.content .agents .bio::before {
+  content: open-quote;
+  font-size: 3rem;
+  color: rgba(50, 50, 50, 0.8);
+}
+
+.content .agents .bio::after {
+  content: close-quote;
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(50, 50, 50, 0.8);
 }
 
 .content .why--us {

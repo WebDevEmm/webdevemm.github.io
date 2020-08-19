@@ -56,7 +56,9 @@
     // transform: scaleY(0.9);
     width: 90%;
     height: 90%;
+  }
 
+  a:focus {
     .blog--title {
       padding: 1rem;
 
@@ -70,13 +72,12 @@
         left: -100px;
         width: 850px;
 
-        transform: scaleX(0);
+        transform: scaleX(1);
         transform-origin: left;
         transition: transform 350ms ease-in;
       }
     }
   }
-
   a:hover,
   a:active,
   a:focus {
