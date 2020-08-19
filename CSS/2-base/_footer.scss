@@ -1,35 +1,86 @@
 footer {
   position: relative;
-  background: $cSand-3 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  height: 30vh;
-  color: $cBlue;
-  // box-shadow: 0px -5px 20px 0px;
-
-  p {
-    padding: 1rem;
-    margin: 2rem;
-    text-align: center;
+  background: $cSand-3 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  box-shadow: inset 0 5px 10px 2px;
+  height: fit-content;
+  .footer--gkg {
+    position: absolute;
+    font-weight: bolder;
+    font-size: 6em;
+    top: -0.3em;
+    left: 0.5em;
+  }
+  .footer--grid {
     color: $cBlue;
-  }
+    display: flex;
+    flex-direction: column;
 
-  a {
-    margin: 0;
-  }
+    h1 {
+      font-size: 2rem;
+      margin: 1em auto 0 auto;
+    }
 
-  .footer--b--icons {
-    @include svg--a(0.5rem, 2rem);
-    @include ds;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-  }
+    p {
+      padding: 1rem;
+      margin: 4rem auto 1rem auto;
+      text-align: center;
+      color: $cBlue;
+    }
 
-  .copy {
-    display: inline;
-    position: absolute;
-    font-weight: bold;
-    // margin: 0.5rem;
-    bottom: 0;
-    right: 0;
+    a {
+      margin: 0;
+    }
+
+    address {
+      @include anchor($cBlue, $cWhiteD-2);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 1em;
+      margin: 2em auto 0;
+      img {
+        display: relative;
+        width: 8em;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+      a {
+        font-weight: bolder;
+      }
+    }
+    .af--logos {
+      padding-bottom: 1rem;
+      margin: 0 auto;
+      img {
+        width: 10em;
+        margin: 1em;
+      }
+    }
+
+    .footer--b--icons {
+      @include svg--a(0.5rem, 2rem, $cBlue, $cWhiteD-2);
+      @include ds;
+      // position: relative;
+      color: $cSand-3;
+      align-items: center;
+      margin: 1rem auto auto;
+      &::after {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        // width: 30vw;
+        height: 1px;
+        left: -500px;
+        right: -500px;
+        margin: -1.5rem auto;
+      }
+      &::after {
+        bottom: -1rem;
+      }
+    }
   }
 }

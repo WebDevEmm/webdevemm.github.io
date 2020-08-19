@@ -1,24 +1,24 @@
-@mixin svg--a($margin, $fontSize) {
+@mixin svg--a($margin, $fontSize, $color-1, $color-2) {
   a:link,
   a:visited {
     margin: $margin;
     font-size: $fontSize;
-    color: $cCafe-5;
+    color: $color-1;
   }
   a:hover,
   a:active,
   a:focus {
     outline: none;
-    color: $cWhiteD-2;
+    color: $color-2;
   }
 }
 
-@mixin anchor {
+@mixin anchor($color-1, $color-2) {
   a:link,
   a:visited {
     position: relative;
     text-decoration: none;
-    color: $cWhiteD-2;
+    color: $color-1;
     z-index: 1;
 
     &::after {
@@ -34,11 +34,12 @@
       transition: transform 250ms ease-in;
     }
   }
+
   a:hover,
   a:active,
   a:focus {
     outline: none;
-    color: $cCamel-4;
+    color: $color-2;
     &::after {
       transform: scaleX(1);
       transform-origin: left;
@@ -46,51 +47,24 @@
   }
 }
 
-@mixin anchor--alt {
+@mixin blog--anchor {
   a:link,
   a:visited {
     position: relative;
     text-decoration: none;
     z-index: 1;
-    // transform: scaleX(0.9);
-    // transform: scaleY(0.9);
     width: 90%;
     height: 90%;
   }
 
-  a:focus {
-    .blog--title {
-      padding: 1rem;
-
-      &::after {
-        content: "";
-        position: absolute;
-        background: currentColor;
-        z-index: -1;
-        height: 4px;
-        bottom: 8px;
-        left: -100px;
-        width: 850px;
-
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: transform 350ms ease-in;
-      }
-    }
-  }
   a:hover,
   a:active,
   a:focus {
-    .blog--title {
-      &::after {
-        transform: scaleX(1);
-      }
-    }
     .blog--p {
       padding: 1.2rem 1.2rem 1.2rem 220px;
+      box-shadow: 0px 20px 20px -10px black;
     }
     // background: rgba(0, 0, 0, 1), $cSand-3;
-    // box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
     outline: none;
     position: relative;
     // transform: scaleX(1);

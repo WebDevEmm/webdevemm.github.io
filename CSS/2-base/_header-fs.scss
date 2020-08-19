@@ -23,8 +23,7 @@
   padding-top: 1.5rem;
 
   .header--col {
-    @include anchor;
-
+    @include anchor($cWhiteD-2, $cCamel-4);
     .gkg--lrg {
       display: inline-block;
       font-size: 6rem;
@@ -50,18 +49,18 @@
 // ICONS
 
 .header--icons {
+  @include svg--a(0.5rem 1rem, 2.5rem, $cCamel-4, $cWhiteD-2);
+  @include ds;
   display: flex;
   flex-direction: column;
   position: absolute;
   font-size: 2em;
-  top: 0;
+  bottom: 150px;
   right: 0;
-  @include svg--a(0.5rem 1rem, 2.5rem);
-  @include ds;
 }
 
 .header--b--icons {
-  @include svg--a(1rem 0.8rem, 3rem);
+  @include svg--a(1rem 0.8rem, 3rem, $cCamel-4, $cWhiteD-2);
   @include ds;
 
   display: inline;

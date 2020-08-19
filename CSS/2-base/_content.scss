@@ -30,7 +30,7 @@
       position: absolute;
       background: $cBlue;
       z-index: -1;
-      width: 60px;
+      width: 6f0px;
       height: 30px;
       left: 0;
       right: 0;
@@ -54,11 +54,12 @@
   // BLOGS
 
   .blog--flex {
-    @include anchor--alt;
+    @include blog--anchor;
     display: flex;
     flex-flow: column;
     flex-grow: 1;
     align-items: center;
+    margin: 2em 2em 0;
 
     .blog--box {
       position: relative;
@@ -66,7 +67,7 @@
       display: grid;
       grid-template-columns: 200px 3fr;
       grid-template-rows: repeat(2, 100px);
-      margin: 0.5rem;
+      margin: 0.2rem;
 
       .blog--img {
         position: relative;
@@ -182,12 +183,13 @@
   // AGENTS v
 
   .agents {
+    // @include anchor($cWhiteD-2, $cCamel-4);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
     font-size: 1.5rem;
-    @include anchor();
 
     position .agent {
       display: flex;
@@ -207,7 +209,8 @@
     }
 
     address {
-      @include anchor;
+      @include anchor($cWhiteD-2, $cCamel-4);
+
       color: $cCamel-4;
       line-height: 2rem;
     }
@@ -218,7 +221,7 @@
       color: $cBlue;
       background: $cSand-3;
       border-radius: 20px;
-      padding: 1.5em 1em;
+      padding: 1em;
       &::before {
         content: open-quote;
         font-size: 3rem;

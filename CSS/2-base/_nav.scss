@@ -1,7 +1,7 @@
 @import "../0-helpers/variables";
 
 #top--nav {
-  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   position: sticky;
   top: 0;
   box-shadow: 0px 5px 10px 0px;
@@ -10,14 +10,14 @@
 }
 
 #main--nav {
+  @include anchor($cWhiteD-2, $cCamel-4);
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  @include anchor();
 
   .gkg {
-    font-size: 1.4rem;
+    font-size: 1.8em;
     justify-self: center;
     align-self: center;
   }
@@ -27,24 +27,30 @@
     flex: 2;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
   }
 
   li {
     list-style: none;
-    margin: 1rem;
+    margin: 0.6em;
+    a {
+      font-size: 0.9em;
+    }
   }
 }
 
 #bottom--nav {
+  @include svg--a(1rem, 2rem, $cCamel-4, $cWhiteD-2);
+  @include ds;
   display: inline-flex;
   justify-self: flex-end;
   position: sticky;
   bottom: 0;
-  @include svg--a(1rem, 2rem);
-  @include ds;
 }
 
 #nav--icons {
+  @include svg--a(1rem, 3rem, red, red);
+
   // display: inline-flex;
   // justify-self: flex-end;
   // position: sticky;
@@ -66,6 +72,5 @@
   // bottom: 0px;
   // margin-top: 100px;
 
-  @include svg--a(1rem, 3rem);
   // @include ds;
 }
