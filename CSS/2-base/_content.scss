@@ -118,7 +118,7 @@
           box-shadow 150ms ease-in-out;
 
         &::after {
-          content: 'Continue reading...';
+          content: 'Click to read more...';
           height: 45px;
           width: 126px;
           position: absolute;
@@ -127,13 +127,13 @@
           // font-family: forum;
           font-weight: normal;
           line-height: .9em;
-          bottom: -52px;
+          bottom: -60px;
           right: 20px;
           z-index: -10;
-          padding: .5em .5em .1em .1em;
-          box-shadow: -3px 0px 20px -5px rgba(0, 0, 0, 1);
-          border-top-right-radius: 5px;
-          border-top-left-radius: 5px;
+          padding: .5em .5em .3em .5em;
+          box-shadow: -5px 10px 20px -5px rgba(0, 0, 0, 1);
+          border-top-right-radius: 0px;
+          border-top-left-radius: 0px;
           border-bottom-right-radius: 20px;
           border-bottom-left-radius: 20px;
 
@@ -278,6 +278,10 @@
     font-size: 1.5rem;
     font-weight: bold;
 
+    label {
+      cursor: pointer;
+    }
+
     // FORM HEADER
     .form--header {
       grid-column: 1/-1;
@@ -327,9 +331,16 @@
     // SUBMIT
     #submit {
       width: fit-content;
-      padding: 1rem;
+      padding: .5em 1em;
       justify-self: center;
       margin-top: 1rem;
+      color: $cBlue;
+      background: $cCamel-4;
+
+      &:hover {
+        background: red;
+        cursor: pointer;
+      }
     }
 
     // FORM FOOTER

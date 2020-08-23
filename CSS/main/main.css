@@ -697,7 +697,7 @@ section {
 }
 
 #blogs--section .blog--flex .blog--box .blog--p::after {
-  content: 'Continue reading...';
+  content: 'Click to read more...';
   height: 45px;
   width: 126px;
   position: absolute;
@@ -706,14 +706,14 @@ section {
   font-size: 1.2rem;
   font-weight: normal;
   line-height: .9em;
-  bottom: -52px;
+  bottom: -60px;
   right: 20px;
   z-index: -10;
-  padding: .5em .5em .1em .1em;
-  -webkit-box-shadow: -3px 0px 20px -5px black;
-          box-shadow: -3px 0px 20px -5px black;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  padding: .5em .5em .3em .5em;
+  -webkit-box-shadow: -5px 10px 20px -5px black;
+          box-shadow: -5px 10px 20px -5px black;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   -webkit-transform: scaleY(0);
@@ -892,6 +892,10 @@ section {
   font-weight: bold;
 }
 
+#contact--form--section form label {
+  cursor: pointer;
+}
+
 #contact--form--section form .form--header, #contact--form--section form .form--footer {
   grid-column: 1/-1;
   -ms-grid-row: 1;
@@ -952,10 +956,17 @@ section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 1rem;
+  padding: .5em 1em;
   -ms-grid-column-align: center;
       justify-self: center;
   margin-top: 1rem;
+  color: #2a283f;
+  background: #c3a082;
+}
+
+#contact--form--section form #submit:hover {
+  background: red;
+  cursor: pointer;
 }
 
 #contact--form--section form .form--footer {
