@@ -83,6 +83,8 @@
         object-fit: cover;
         grid-column: 1 / 2;
         grid-row: 1 / 3;
+        transition: box-shadow 200ms ease-in-out;
+
       }
 
       .blog--title {
@@ -110,6 +112,35 @@
         padding-left: 220px;
         border-radius: 20px;
         z-index: -1;
+
+        transition:
+          padding-bottom 150ms ease-in-out,
+          box-shadow 150ms ease-in-out;
+
+        &::after {
+          content: 'Continue reading...';
+          height: 45px;
+          width: 126px;
+          position: absolute;
+          background: $cCamel-4 linear-gradient(rgba(0, 0, 0, .1));
+          font-size: 1.2rem;
+          // font-family: forum;
+          font-weight: normal;
+          line-height: .9em;
+          bottom: -52px;
+          right: 20px;
+          z-index: -10;
+          padding: .5em .5em .1em .1em;
+          box-shadow: -3px 0px 20px -5px rgba(0, 0, 0, 1);
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+
+          transform: scaleY(0);
+          transition: transform 350ms ease-out;
+          transform-origin: top;
+        }
       }
     }
   }

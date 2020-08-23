@@ -24,7 +24,7 @@
     text-decoration: none;
     color: $color-1;
     z-index: 1;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -64,6 +64,7 @@
     .blog--img {
       box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 1);
     }
+
   }
 
   a:hover,
@@ -74,13 +75,19 @@
     .blog--p {
       @include card--shadow--medium();
       // padding: 1rem 1rem 2rem 220px;
-      padding-bottom: 40px;
-      padding-top: 40px;
-      background: linear-gradient(rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.8)) $cSand-3;
+      padding-bottom: 50px;
+
+      &::after {
+        transform: scaleY(1);
+
+      }
+
     }
 
+
+
     .blog--img {
-      box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 1);
+      box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 1);
     }
 
     // width: 95%;
