@@ -12,9 +12,3 @@ $cBlue: #2a283f;
   font-family: forum;
   src: url("../../Fonts/Forum.otf");
 }
-
-@mixin flexCenter() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

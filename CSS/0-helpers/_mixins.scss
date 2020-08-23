@@ -1,10 +1,13 @@
 @mixin svg--a($margin, $fontSize, $color-1, $color-2) {
+
   a:link,
   a:visited {
+    text-decoration: none;
     margin: $margin;
     font-size: $fontSize;
     color: $color-1;
   }
+
   a:hover,
   a:active,
   a:focus {
@@ -13,14 +16,15 @@
   }
 }
 
-@mixin anchor($color-1, $color-2) {
+@mixin anchor($color-1 : $cWhiteD-2, $color-2 : $cCamel-4) {
+
   a:link,
   a:visited {
     position: relative;
     text-decoration: none;
     color: $color-1;
     z-index: 1;
-
+    
     &::after {
       content: "";
       position: absolute;
@@ -40,6 +44,7 @@
   a:focus {
     outline: none;
     color: $color-2;
+
     &::after {
       transform: scaleX(1);
       transform-origin: left;
@@ -48,32 +53,54 @@
 }
 
 @mixin blog--anchor {
+
   a:link,
   a:visited {
-    position: relative;
     text-decoration: none;
     z-index: 1;
     width: 90%;
     height: 90%;
+
+    .blog--img {
+      box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 1);
+    }
   }
 
   a:hover,
   a:active,
   a:focus {
-    .blog--p {
-      padding: 1.2rem 1.2rem 1.2rem 220px;
-      box-shadow: 0px 20px 20px -10px black;
-    }
-    // background: rgba(0, 0, 0, 1), $cSand-3;
     outline: none;
-    position: relative;
-    // transform: scaleX(1);
-    // transform: scaleY(1);
-    width: 95%;
-    height: 95%;
+
+    .blog--p {
+      @include card--shadow--medium();
+      // padding: 1rem 1rem 2rem 220px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      background: linear-gradient(rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.8)) $cSand-3;
+    }
+
+    .blog--img {
+      box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 1);
+    }
+
+    // width: 95%;
+    // height: 95%;
   }
 }
 
-@mixin ds {
+@mixin drop--shadow {
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+@mixin card--shadow--large {
+  box-shadow: inset 0px 8px 16px 4px rgba(0, 0, 0, 1);
+}
+
+@mixin card--shadow--medium {
+  position: sticky;
+  box-shadow: inset 0px 8px 10px 2px rgba(0, 0, 0, 1);
+}
+
+@mixin card--shadow--small {
+  box-shadow: inset 0px 6px 10px 0px rgba(0, 0, 0, 1);
 }

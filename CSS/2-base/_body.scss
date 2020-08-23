@@ -10,22 +10,33 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(auto-fit, fit-content);
-  grid-template-areas: "header" "top--nav" "main" "bottom--nav" "footer";
+  grid-template-rows: repeat(5, max-content);
+  grid-template-areas:
+    "header"
+    "top--nav"
+    "main"
+    "bottom--nav"
+    "footer";
+
   header {
     grid-area: header;
   }
+
   #top--nav {
     grid-area: top--nav;
   }
+
   main {
     grid-area: main;
   }
+
   #bottom--nav {
     grid-area: bottom--nav;
   }
+
   footer {
     grid-area: footer;
+    grid-row: -1;
   }
 }
 
@@ -40,6 +51,7 @@ main {
 .gkg {
   color: $cCafe-5;
   font-family: forum;
+
   &::selection {
     color: $cEgg-1;
     background: $cCafe-5;
@@ -62,7 +74,7 @@ h3 {
   color: $cEgg-1;
 }
 
-.ts {
+.text--shadow {
   text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
 }
 

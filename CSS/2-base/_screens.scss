@@ -11,24 +11,3 @@ section {
   margin-bottom: 2rem;
   margin-top: -90px;
 }
-
-.first--screen {
-  background: url("../../Images/house--bg.jpeg");
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 3;
-  box-shadow: 0px 5px 5px 0px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    background-attachment: sticky;
-    clip-path: polygon(0 calc(100% - 80%), 100% 40%, 100% 100%, 0 100%);
-    top: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-  }
-}

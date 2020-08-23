@@ -1,85 +1,131 @@
-.main--header {
+.header--disp--ptn {
   display: grid;
-  grid-template-rows: repeat(2, minmax(fit-content, 455px));
-  justify-content: center;
   position: relative;
 
+  grid-template-columns: 30% auto auto 30%;
+  grid-template-rows: 3rem repeat(3, min-content) 3rem;
+  grid-template-areas:
+
+    "...... ......     ...... ......"
+    "...... title      img    ......"
+    "...... translate  img    ......"
+    "...... text       text   ......"
+    "...... ......     ...... ......";
+
+  #header--title {
+    grid-area: title;
+  }
+
+  #header--translate {
+    grid-area: translate;
+  }
+
+  #header--img {
+    grid-area: img;
+  }
+
+  #header--text {
+    grid-area: text;
+  }
+}
+
+header {
+  z-index: 3;
+
   p {
-    font-size: 1.3rem;
+    font-size: 1.3em;
+    color: $cEgg-1;
+    margin: 0;
   }
-}
 
-.alt--header {
-  @extend .main--header;
-  grid-template-rows: minmax(fit-content, 455px);
-  max-height: 400px;
-}
+  a {
+    font-weight: bold;
+  }
 
-.header--flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-  padding-top: 1.5rem;
+  #header--title {
+    font-size: 6rem;
+    margin: 0;
+    padding: 1rem;
+  }
 
-  .header--col {
+  #header--translate {
     @include anchor($cWhiteD-2, $cCamel-4);
-    .gkg--lrg {
-      display: inline-block;
-      font-size: 6rem;
-      margin: 3rem 0rem 1rem;
-      text-shadow: 0 0, 5px 5px rgba(0, 0, 0, 0.5), 0 0, 0 0;
-    }
+    display: inline;
+    padding: 1rem;
+  }
 
-    p {
-      display: inline;
-      margin: 0;
-    }
+  #header--img {
+    margin: auto 1rem -0.02rem 1rem;
+  }
 
-    a {
-      font-weight: bold;
-    }
+  #header--text {
+    display: inline;
+    padding: 2em 3em 4em;
+  }
 
-    img {
-      margin: 1.5rem 0 1.5rem 1.5rem;
-    }
+  // ICONS
+
+  .header--icons {
+    @include svg--a(.5rem 2rem, 2.5rem, $cCamel-4, $cWhiteD-2);
+    @include drop--shadow;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 2em;
+    top: 200px;
+    right: 0;
+  }
+
+  .header-icons-sm {
+    @include svg--a(0 .5rem, 3rem, $cCamel-4, $cWhiteD-2);
+    @include drop--shadow;
+
+    display: inline;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1rem;
+    font-size: 6rem;
+  }
+
+  .rr--logo {
+    position: absolute;
+    background: white;
+    bottom: 1.5rem;
+    right: 2rem;
+    width: 200px;
+    margin: 0;
+    padding: 0.5rem;
   }
 }
 
-// ICONS
+.header--bg {
+  background: url("../../Images/house--bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-.header--icons {
-  @include svg--a(0.5rem 1rem, 2.5rem, $cCamel-4, $cWhiteD-2);
-  @include ds;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  font-size: 2em;
-  bottom: 150px;
-  right: 0;
-}
+  position: relative;
+  box-shadow: 0px 5px 5px 0px;
 
-.header--b--icons {
-  @include svg--a(1rem 0.8rem, 3rem, $cCamel-4, $cWhiteD-2);
-  @include ds;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.65);
+    background-attachment: sticky;
+    z-index: -1;
+  }
 
-  display: inline;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 0rem;
-  font-size: 6rem;
-}
 
-.rr--logo {
-  position: absolute;
-  background: white;
-  bottom: 1rem;
-  right: 1rem;
-  width: 200px;
-  margin: 0;
-  padding: 0.5rem;
+  &::after {
+    clip-path: polygon(0 100, 100% 0, 100% 100%, 0 100%);
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
 }

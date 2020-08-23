@@ -3,13 +3,16 @@ footer {
   background: $cSand-3 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   box-shadow: inset 0 5px 10px 2px;
   height: fit-content;
+  padding-top: 3rem;
+
   .footer--gkg {
     position: absolute;
     font-weight: bolder;
     font-size: 6em;
-    top: -0.3em;
+    top: 0em;
     left: 0.5em;
   }
+
   .footer--grid {
     color: $cBlue;
     display: flex;
@@ -21,14 +24,11 @@ footer {
     }
 
     p {
-      padding: 1rem;
+      padding: 1em 2.5em;
+      line-height: 1.5em;
       margin: 4rem auto 1rem auto;
       text-align: center;
       color: $cBlue;
-    }
-
-    a {
-      margin: 0;
     }
 
     address {
@@ -39,6 +39,7 @@ footer {
       gap: 1em;
       padding: 1em;
       margin: 2em auto 0;
+
       img {
         display: relative;
         width: 8em;
@@ -48,13 +49,16 @@ footer {
         font-size: 1.2rem;
         margin-top: 0;
       }
+
       a {
         font-weight: bolder;
       }
     }
+
     .af--logos {
       padding-bottom: 1rem;
       margin: 0 auto;
+
       img {
         width: 10em;
         margin: 1em;
@@ -63,11 +67,12 @@ footer {
 
     .footer--b--icons {
       @include svg--a(0.5rem, 2rem, $cBlue, $cWhiteD-2);
-      @include ds;
+      @include drop--shadow;
       // position: relative;
       color: $cSand-3;
       align-items: center;
       margin: 1rem auto auto;
+
       &::after {
         content: "";
         position: absolute;
@@ -78,6 +83,7 @@ footer {
         right: -500px;
         margin: -1.5rem auto;
       }
+
       &::after {
         bottom: -1rem;
       }

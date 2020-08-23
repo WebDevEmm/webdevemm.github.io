@@ -1,58 +1,63 @@
+// CONTENT RULES
 .content {
   grid-column: 2/3;
   justify-items: center;
+
   h1 {
     text-align: center;
     margin: 2rem auto;
   }
+
   h2 {
     text-align: center;
     margin: 2rem auto;
   }
+
   h3 {
     text-align: center;
     margin: 2rem auto;
   }
+
   p {
     text-align: center;
-    padding: 1rem;
-    font-size: 2rem;
+    padding: 1.5rem;
   }
 
-  h1.gkg {
+  .section--title {
     position: relative;
     padding-bottom: 1.5rem;
-    box-shadow: 0px 10px 0px -5px currentColor;
+    box-shadow: 0px 12px 0px -5px currentColor;
     z-index: 1;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background: $cBlue;
-      z-index: -1;
-      width: 6f0px;
-      height: 30px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      bottom: 0;
-    }
+    &::before,
     &::after {
       content: "";
       position: absolute;
-      background: currentColor;
-      z-index: -2;
-      width: 30px;
-      height: 30px;
+      height: 60px;
       left: 0;
       right: 0;
       margin: auto;
-      bottom: -15px;
+    }
+
+    &::before {
+      background: $cBlue;
+      z-index: -1;
+      width: 100px;
+      bottom: 0;
+    }
+
+    &::after {
+      background: currentColor;
+      z-index: -2;
+      width: 60px;
+      bottom: -30px;
       transform: rotate(45deg);
     }
   }
-  // BLOGS
+}
 
+// BLOGS
+#blogs--section {
   .blog--flex {
     @include blog--anchor;
     display: flex;
@@ -91,6 +96,7 @@
       }
 
       .blog--p {
+        @include card--shadow--small;
         position: absolute;
         align-self: center;
         justify-self: center;
@@ -102,24 +108,144 @@
         margin-top: 0;
         padding: 1rem;
         padding-left: 220px;
-        border-radius: 10px;
+        border-radius: 20px;
         z-index: -1;
       }
     }
   }
+}
 
-  // CONTACT US FORM
+// AGENTS 
+#about--section {
+  background: $cBlue;
+
+  .agents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    img {
+      margin: 2rem 0;
+      background: white;
+      border-radius: 15px;
+    }
+
+    address {
+      @include anchor();
+      background: $cBlue;
+      color: $cCamel-4;
+      line-height: 2rem;
+      padding-bottom: 1.5em;
+    }
+
+    .bio {
+      @include card--shadow--medium;
+      position: absolute;
+      width: 400px;
+      height: 360px;
+      z-index: -2;
+      border-radius: 20px;
+      background: $cSand-3;
+    }
+
+    p {
+      border-radius: 20px;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      width: 400px;
+      height: 300px;
+      position: sticky;
+      font-style: italic;
+      z-index: -1;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $cBlue;
+      padding: auto;
+
+      // &::before,
+      // &::after {
+      //   position: relative;
+      //   font-size: 2.5em;
+      //   color: rgba(0, 0, 0, 0.6);
+      //   z-index: -1;
+      // }
+
+      // &::before {
+      //   content: open-quote;
+      //   top: 0.2em;
+      //   left: 0.5em;
+      // }
+
+      // &::after {
+      //   content: close-quote;
+      //   bottom: -0.3em;
+      //   right: 1em;
+      // }
+    }
+  }
+}
+
+// WHY US
+#why--us--section {
+  .why--us {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+
+    .why--us--box {
+      .why--us--box--h3 {
+        font-size: 3rem;
+        top: 0;
+        height: fit-content;
+        margin: 1rem;
+      }
+
+      .why--us--box--p {
+        @include card--shadow--small;
+        color: $cBlue;
+        background: $cSand-3;
+        border-radius: 10px;
+        padding: 0em;
+        margin: 1em;
+
+        p {
+          margin: 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// CONTACT US FORM
+#contact--form--section {
+  p {
+    font-size: 2rem;
+    margin: 2em auto 1em;
+  }
 
   form {
-    font-weight: bold;
+    @include card--shadow--large;
     display: grid;
     grid-template-rows: repeat(3, fit-content);
     border-radius: 10px;
     background: $cSand-3;
     color: $cBlue;
     margin: 3rem 0;
-    padding: 2rem;
+    padding: .5em 1rem;
     font-size: 1.5rem;
+    font-weight: bold;
 
     // FORM HEADER
     .form--header {
@@ -129,11 +255,13 @@
       align-items: center;
       padding: 1rem;
       color: $cBlue;
+
       p {
         width: 100%;
         color: $cBlue;
         font-size: 2rem;
       }
+
       svg {
         margin: 0.5rem;
         font-size: 3rem;
@@ -141,7 +269,7 @@
       }
     }
 
-    // FORM DATA v
+    // FORM DATA 
     .form--data {
       display: flex;
       flex-wrap: wrap;
@@ -157,109 +285,29 @@
           border-radius: 10px;
           padding: 0.5rem;
         }
+
         .form--time--option {
           font-weight: lighter;
           font-size: large;
         }
       }
     }
-    // SUBMIT vv
+
+    // SUBMIT
     #submit {
       width: fit-content;
       padding: 1rem;
       justify-self: center;
       margin-top: 1rem;
     }
-    // FORM FOOTER vv
+
+    // FORM FOOTER
     .form--footer {
       @extend .form--header;
       grid-column: 1/-1;
       grid-row: 4/5;
       font-style: italic;
       overflow-wrap: break-word;
-    }
-  }
-
-  // AGENTS v
-
-  .agents {
-    // @include anchor($cWhiteD-2, $cCamel-4);
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 1.5rem;
-
-    position .agent {
-      display: flex;
-      text-justify: auto;
-      flex-flow: column;
-      width: 40vw;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    img {
-      margin: 2rem 0;
-      background: white;
-      border-radius: 15px;
-    }
-
-    address {
-      @include anchor($cWhiteD-2, $cCamel-4);
-
-      color: $cCamel-4;
-      line-height: 2rem;
-    }
-    .bio {
-      font-style: italic;
-      position: relative;
-      width: 400px;
-      color: $cBlue;
-      background: $cSand-3;
-      border-radius: 20px;
-      padding: 1em;
-      &::before {
-        content: open-quote;
-        font-size: 3rem;
-        color: rgba(50, 50, 50, 0.8);
-      }
-      &::after {
-        content: close-quote;
-        position: absolute;
-        font-size: 3rem;
-        color: rgba(50, 50, 50, 0.8);
-      }
-    }
-  }
-
-  // WHY US
-
-  .why--us {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
-    .why--us--box {
-      .why--us--box--h3 {
-        font-size: 3rem;
-        top: 0;
-        height: fit-content;
-        margin: 1rem;
-      }
-      .why--us--box--p {
-        color: $cBlue;
-        background: $cSand-3;
-        border-radius: 10px;
-        padding: 1rem;
-        margin: 1rem;
-        p {
-          margin: 0;
-          font-size: 1.5rem;
-        }
-      }
     }
   }
 }
