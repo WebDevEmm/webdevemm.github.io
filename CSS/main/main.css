@@ -27,13 +27,13 @@ body {
   -ms-grid-rows: (max-content)[6];
       grid-template-rows: repeat(6, -webkit-max-content);
       grid-template-rows: repeat(6, max-content);
-      grid-template-areas: "phone--bar" "header" "top--nav" "main" "bottom--nav" "footer";
+      grid-template-areas: "contact--nav" "header" "top--nav" "main" "bottom--nav" "footer";
 }
 
-body #phone--bar {
+body #contact--nav {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: phone--bar;
+  grid-area: contact--nav;
 }
 
 body header {
