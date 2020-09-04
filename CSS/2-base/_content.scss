@@ -3,21 +3,6 @@
   grid-column: 2/3;
   justify-items: center;
 
-  h1 {
-    text-align: center;
-    margin: 2rem auto;
-  }
-
-  h2 {
-    text-align: center;
-    margin: 2rem auto;
-  }
-
-  h3 {
-    text-align: center;
-    margin: 2rem auto;
-  }
-
   p {
     text-align: center;
     padding: 1.5rem;
@@ -28,6 +13,7 @@
     padding-bottom: 1.5rem;
     box-shadow: 0px 12px 0px -5px currentColor;
     z-index: 1;
+
 
     &::before,
     &::after {
@@ -42,16 +28,230 @@
     &::before {
       background: $cBlue;
       z-index: -1;
-      width: 100px;
-      bottom: 0;
+      width: 190px;
+      bottom: 0px;
     }
 
     &::after {
       background: currentColor;
       z-index: -2;
       width: 60px;
-      bottom: -30px;
+      bottom: -15px;
       transform: rotate(45deg);
+    }
+  }
+}
+
+// WELCOME
+#welcome {
+  .section--title {
+    padding-top: 1em;
+  }
+
+  p {
+    color: $cEgg-1;
+    font-size: 2rem;
+
+    a {
+      @include anchor($color-1: $cCamel-4, $color-2: $cSand-3);
+    }
+  }
+}
+
+// AGENTS 
+#about--section {
+  background: $cBlue;
+
+  .agents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: $cBlue;
+
+    img {
+      margin: 1.5rem 0 0;
+      background: white;
+      border-radius: 15px;
+      background: $cBlue;
+    }
+
+    address {
+      background: $cBlue;
+      color: $cCamel-4;
+      line-height: 2rem;
+      padding-bottom: 1.5em;
+
+      a {
+        @include anchor();
+      }
+    }
+
+    .bio {
+      @include shadow--container();
+    }
+
+    p {
+      @include sticky--p();
+      border-radius: 20px;
+      width: 400px;
+      height: 300px;
+      font-style: italic;
+      color: $cBlue;
+    }
+  }
+}
+
+// WHY US
+#why--us--section {
+  .why--us {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+
+    .why--us--box {
+      .why--us--box--h3 {
+        font-size: 3rem;
+        top: 0;
+        height: fit-content;
+        margin: 1rem;
+        text-align: center;
+      }
+
+      .why--us--shadow--container {
+        @include shadow--container($width: 500px, $height:150px, $border-radius: 10px);
+        @include card--shadow--small;
+        padding: 0em;
+        margin: 1em;
+
+      }
+
+      .why--us--box--p {
+        @include sticky--p($width: 500px, $height: 150px, $border-radius: 10px);
+        color: $cBlue;
+        border-radius: 10px;
+        padding: 0em;
+        margin: 1em;
+        width: 500px;
+
+        p {
+          padding-top: 2em;
+          margin: 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// CONTACT US FORM
+#contact--form--section {
+  p {
+    font-size: 2rem;
+  }
+
+  form {
+    @include card--shadow--large;
+    display: grid;
+    grid-template-rows: repeat(3, fit-content);
+    border-radius: 10px;
+    background: $cSand-3;
+    color: $cBlue;
+    margin: 2em 0 1em;
+    padding: .5em 1em;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    label {
+      cursor: pointer;
+    }
+
+    // FORM HEADER
+    .form--header {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      justify-items: center;
+      align-items: center;
+      padding: 1em;
+      color: $cBlue;
+
+      margin: 1em auto 1.2em;
+
+      p {
+        width: 100%;
+        color: $cBlue;
+        font-size: 2rem;
+      }
+
+      svg {
+        margin: 0.5rem;
+        font-size: 3rem;
+        color: $cBlue;
+      }
+    }
+
+    // FORM DATA 
+    .form--data {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .form--col {
+        justify-content: flex-start;
+        width: 260px;
+        margin: 0.5rem;
+
+        textarea {
+          box-sizing: border-box;
+          border-radius: 10px;
+          padding: 0.5rem;
+        }
+
+        .form--time--option {
+          font-weight: lighter;
+          font-size: large;
+        }
+      }
+    }
+
+    // SUBMIT
+    #submit {
+      width: fit-content;
+      padding: .66em 6em;
+      font-size: 1em;
+      justify-self: center;
+      margin-top: 1.5em;
+      background: $cCamel-4;
+      color: $cBlue;
+      font-weight: 500;
+      font-size: 1.6em;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 0px 6px -1px;
+
+      &:hover {
+        box-shadow: inset 0px 0px 6px -1px;
+        background: linear-gradient(rgba(0, 0, 0, .01)), $cCamel-4;
+
+        // background: $cBlue;
+        cursor: pointer;
+      }
+    }
+
+    // FORM FOOTER
+    .form--footer {
+      @extend .form--header;
+      grid-row: 4/5;
+      font-style: italic;
+      justify-content: center;
+      align-content: center;
+
+      p {
+        padding: 0;
+      }
     }
   }
 }
@@ -118,7 +318,7 @@
           box-shadow 150ms ease-in-out;
 
         &::after {
-          content: 'Click to read more...';
+          content: 'Click now to read more...';
           height: 45px;
           width: 126px;
           position: absolute;
@@ -129,7 +329,7 @@
           line-height: .9em;
           bottom: -60px;
           right: 20px;
-          z-index: -10;
+          z-index: -1;
           padding: .5em .5em .3em .5em;
           box-shadow: -5px 10px 20px -5px rgba(0, 0, 0, 1);
           border-top-right-radius: 0px;
@@ -142,214 +342,6 @@
           transform-origin: top;
         }
       }
-    }
-  }
-}
-
-// AGENTS 
-#about--section {
-  background: $cBlue;
-
-  .agents {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 1;
-
-    h2 {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    img {
-      margin: 2rem 0;
-      background: white;
-      border-radius: 15px;
-    }
-
-    address {
-      @include anchor();
-      background: $cBlue;
-      color: $cCamel-4;
-      line-height: 2rem;
-      padding-bottom: 1.5em;
-    }
-
-    .bio {
-      @include card--shadow--medium;
-      position: absolute;
-      width: 400px;
-      height: 360px;
-      z-index: -2;
-      border-radius: 20px;
-      background: $cSand-3;
-    }
-
-    p {
-      border-radius: 20px;
-      box-sizing: border-box;
-      word-wrap: break-word;
-      width: 400px;
-      height: 300px;
-      position: sticky;
-      font-style: italic;
-      z-index: -1;
-      top: 0px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      color: $cBlue;
-      padding: auto;
-
-      // &::before,
-      // &::after {
-      //   position: relative;
-      //   font-size: 2.5em;
-      //   color: rgba(0, 0, 0, 0.6);
-      //   z-index: -1;
-      // }
-
-      // &::before {
-      //   content: open-quote;
-      //   top: 0.2em;
-      //   left: 0.5em;
-      // }
-
-      // &::after {
-      //   content: close-quote;
-      //   bottom: -0.3em;
-      //   right: 1em;
-      // }
-    }
-  }
-}
-
-// WHY US
-#why--us--section {
-  .why--us {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
-
-    .why--us--box {
-      .why--us--box--h3 {
-        font-size: 3rem;
-        top: 0;
-        height: fit-content;
-        margin: 1rem;
-      }
-
-      .why--us--box--p {
-        @include card--shadow--small;
-        color: $cBlue;
-        background: $cSand-3;
-        border-radius: 10px;
-        padding: 0em;
-        margin: 1em;
-
-        p {
-          margin: 0;
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
-}
-
-// CONTACT US FORM
-#contact--form--section {
-  p {
-    font-size: 2rem;
-    margin: 2em auto 1em;
-  }
-
-  form {
-    @include card--shadow--large;
-    display: grid;
-    grid-template-rows: repeat(3, fit-content);
-    border-radius: 10px;
-    background: $cSand-3;
-    color: $cBlue;
-    margin: 3rem 0;
-    padding: .5em 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-
-    label {
-      cursor: pointer;
-    }
-
-    // FORM HEADER
-    .form--header {
-      grid-column: 1/-1;
-      grid-row: 1/2;
-      justify-items: center;
-      align-items: center;
-      padding: 1rem;
-      color: $cBlue;
-
-      p {
-        width: 100%;
-        color: $cBlue;
-        font-size: 2rem;
-      }
-
-      svg {
-        margin: 0.5rem;
-        font-size: 3rem;
-        color: $cBlue;
-      }
-    }
-
-    // FORM DATA 
-    .form--data {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-
-      .form--col {
-        justify-content: flex-start;
-        width: 260px;
-        margin: 0.5rem;
-
-        textarea {
-          box-sizing: border-box;
-          border-radius: 10px;
-          padding: 0.5rem;
-        }
-
-        .form--time--option {
-          font-weight: lighter;
-          font-size: large;
-        }
-      }
-    }
-
-    // SUBMIT
-    #submit {
-      width: fit-content;
-      padding: .5em 1em;
-      justify-self: center;
-      margin-top: 1rem;
-      color: $cBlue;
-      background: $cCamel-4;
-
-      &:hover {
-        background: red;
-        cursor: pointer;
-      }
-    }
-
-    // FORM FOOTER
-    .form--footer {
-      @extend .form--header;
-      grid-column: 1/-1;
-      grid-row: 4/5;
-      font-style: italic;
-      overflow-wrap: break-word;
     }
   }
 }

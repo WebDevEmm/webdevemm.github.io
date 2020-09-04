@@ -4,23 +4,46 @@ footer {
   box-shadow: inset 0 5px 10px 2px;
   height: fit-content;
   padding-top: 3rem;
+  margin-top: 80px;
 
-  .footer--gkg {
+  .footer__img {
+    position: absolute;
+    top: 20em;
+    left: 4em;
+  }
+
+  .footer__gkg {
     position: absolute;
     font-weight: bolder;
     font-size: 6em;
-    top: 0em;
-    left: 0.5em;
+    top: .5em;
+    right: 0.5em;
   }
 
-  .footer--grid {
+  .footer__grid {
     color: $cBlue;
     display: flex;
     flex-direction: column;
 
-    h1 {
-      font-size: 2rem;
-      margin: 1em auto 0 auto;
+    h2 {
+      font-size: 4rem;
+      margin: -1em auto 0em auto;
+    }
+
+    #footer__addresses {
+      margin: 0em auto 2em auto;
+      margin-top: 1em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      margin-bottom: .5em;
     }
 
     p {
@@ -32,46 +55,31 @@ footer {
     }
 
     address {
-      @include anchor($cBlue, $cWhiteD-2);
+
+      font-size: 1.2em;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       gap: 1em;
-      padding: 1em;
-      margin: 2em auto 0;
-
-      img {
-        display: relative;
-        width: 8em;
-      }
-
-      h4 {
-        font-size: 1.2rem;
-        margin-top: 0;
-      }
+      padding: 1em 1em 0;
+      margin: 1.6em auto 0;
+      height: min-content;
 
       a {
+        @include anchor($cBlue, $cWhiteD-2);
         font-weight: bolder;
+        padding: 0;
+        margin: 0;
       }
     }
 
-    .af--logos {
-      padding-bottom: 1rem;
-      margin: 0 auto;
-
-      img {
-        width: 10em;
-        margin: 1em;
-      }
-    }
-
-    .footer--b--icons {
-      @include svg--a(0.5rem, 2rem, $cBlue, $cWhiteD-2);
-      @include drop--shadow;
+    .footer__icons-b {
+      @include svg--a(0.5rem, 3.5rem, $cBlue, $cWhiteD-2);
+      @include drop--shadow();
       // position: relative;
       color: $cSand-3;
       align-items: center;
-      margin: 1rem auto auto;
+      margin: 0em auto;
 
       &::after {
         content: "";
@@ -82,10 +90,29 @@ footer {
         left: -500px;
         right: -500px;
         margin: -1.5rem auto;
+        bottom: -1rem;
       }
 
-      &::after {
-        bottom: -1rem;
+      // .fa-facebook-square {
+      //   color: #3b5999;
+      // }
+
+      // .fa-instagram-square {
+      //   color: #e4405f;
+      // }
+
+      // .fa-twitter-square {
+      //   color: #55acee;
+      // }
+    }
+
+    .footer__logos-rr-smls {
+      padding-bottom: 1rem;
+      margin: 0 auto;
+
+      img {
+        width: 10em;
+        margin: 1em;
       }
     }
   }

@@ -3,7 +3,7 @@
   position: relative;
 
   grid-template-columns: 30% auto auto 30%;
-  grid-template-rows: 3rem repeat(3, min-content) 3rem;
+  grid-template-rows: 2rem repeat(3, min-content) 3rem;
   grid-template-areas:
 
     "...... ......     ...... ......"
@@ -26,6 +26,7 @@
 
   #header--text {
     grid-area: text;
+
   }
 }
 
@@ -49,9 +50,12 @@ header {
   }
 
   #header--translate {
-    @include anchor($cWhiteD-2, $cCamel-4);
-    display: inline;
+    display: inline-block;
     padding: 1rem;
+
+    a {
+      @include anchor($cWhiteD-2, $cCamel-4);
+    }
   }
 
   #header--img {
@@ -104,6 +108,7 @@ header {
 
 .header--bg {
   background: url("../../Images/house--bg.jpeg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +122,6 @@ header {
     content: "";
     position: absolute;
     background: rgba(0, 0, 0, 0.65);
-    background-attachment: sticky;
     z-index: -1;
   }
 
