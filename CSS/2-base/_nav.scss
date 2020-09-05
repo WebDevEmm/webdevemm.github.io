@@ -16,7 +16,7 @@
 
   a {
     @include anchor();
-    padding-right: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -92,5 +92,6 @@
   position: sticky;
   bottom: 0;
   margin-bottom: -80px;
+  z-index: 10;
 
 }

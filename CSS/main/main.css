@@ -420,7 +420,7 @@ header .rr--logo {
 }
 
 #upper--nav a {
-  padding-right: 1em;
+  margin-right: 1em;
 }
 
 #upper--nav a:-webkit-any-link {
@@ -764,6 +764,7 @@ header .rr--logo {
   position: sticky;
   bottom: 0;
   margin-bottom: -80px;
+  z-index: 10;
 }
 
 #bottom--nav a:link,
@@ -857,7 +858,7 @@ section {
 
 #welcome .content p {
   color: #f1ead4;
-  font-size: 3em;
+  font-size: 2.4em;
 }
 
 #welcome .content .welcome--container {
@@ -996,18 +997,15 @@ section {
   font-size: 1.5rem;
   position: relative;
   z-index: 1;
-  background: #2a283f;
 }
 
 #about--section .agents img {
   margin: 1.5rem 0 0;
   background: white;
   border-radius: 15px;
-  background: #2a283f;
 }
 
 #about--section .agents address {
-  background: #2a283f;
   color: #c3a082;
   line-height: 2rem;
   padding-bottom: 1.5em;
