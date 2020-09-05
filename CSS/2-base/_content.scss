@@ -157,6 +157,10 @@
     grid-gap: 1rem;
 
     .why--us--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       .why--us--box--h3 {
         font-size: 3rem;
         top: 0;
