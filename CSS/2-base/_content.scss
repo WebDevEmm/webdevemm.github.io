@@ -44,24 +44,58 @@
 
 // WELCOME
 #welcome {
-  .section--title {
-    padding-top: 1em;
-  }
+  position: relative;
 
-  p {
-    color: $cEgg-1;
-    font-size: 2rem;
+  .content {
 
-    a {
-      @include anchor($color-1: $cCamel-4, $color-2: $cSand-3);
+    .section--title {
+      padding-top: 1em;
+    }
+
+    p {
+      color: $cEgg-1;
+      font-size: 3em;
+    }
+
+    .welcome--container {
+      @include card--shadow--large();
+      background: $cSand-3;
+      border-radius: 20px;
+      padding: 1em;
+      padding-bottom: 3em;
+      width: 88%;
+      margin: 2em auto;
+
+      p {
+        color: $cBlue;
+        font-size: 2rem;
+
+        a {
+          @include anchor($color-1: $cUmber-8, $color-2: $cEgg-1);
+          padding: 0;
+          margin: 0;
+          font-size: 1.2em;
+          font-weight: 1000;
+        }
+      }
+
+      .fa-gift {
+        color: $cUmber-8;
+        font-size: 5em;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+
+      }
     }
   }
 }
 
 // AGENTS 
 #about--section {
-  background: $cBlue;
-
   .agents {
     display: flex;
     flex-wrap: wrap;
@@ -95,12 +129,22 @@
     }
 
     p {
-      @include sticky--p();
       border-radius: 20px;
       width: 400px;
       height: 300px;
       font-style: italic;
       color: $cBlue;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      box-sizing: border-box;
+      border-radius: 20px;
+      z-index: -1;
+      position: sticky;
+      top: 0;
+      bottom: 0;
     }
   }
 }
@@ -117,31 +161,22 @@
         font-size: 3rem;
         top: 0;
         height: fit-content;
-        margin: 1rem;
+        margin: 0rem 0;
         text-align: center;
       }
 
-      .why--us--shadow--container {
+      .why--us--box--p {
         @include shadow--container($width: 500px, $height:150px, $border-radius: 10px);
         @include card--shadow--small;
-        padding: 0em;
-        margin: 1em;
-
-      }
-
-      .why--us--box--p {
-        @include sticky--p($width: 500px, $height: 150px, $border-radius: 10px);
+        position: relative;
+        font-size: 1.5rem;
         color: $cBlue;
         border-radius: 10px;
-        padding: 0em;
-        margin: 1em;
         width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        p {
-          padding-top: 2em;
-          margin: 0;
-          font-size: 1.5rem;
-        }
       }
     }
   }

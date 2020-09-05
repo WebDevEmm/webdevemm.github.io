@@ -31,10 +31,11 @@
 }
 
 header {
+  position: relative;
   z-index: 3;
 
   p {
-    font-size: 1.3em;
+    font-size: 1.5rem;
     color: $cEgg-1;
     margin: 0;
   }
@@ -64,35 +65,34 @@ header {
 
   #header--text {
     display: inline;
-    padding: 2em 3em 4em;
+    padding: 2em 3em 2.4em;
   }
 
   // ICONS
 
   .header--icons {
-    @include svg--a(.5rem 2rem, 2.5rem, $cCamel-4, $cWhiteD-2);
+    @include svg--a(.5rem 2rem, 3rem, $cCamel-4, $cWhiteD-2);
     @include drop--shadow;
     display: flex;
     flex-direction: column;
     position: absolute;
     font-size: 2em;
-    top: 200px;
+    top: 20px;
     right: 0;
+    text-align: center;
+
   }
 
-  .header-icons-sm {
-    @include svg--a(0 .5rem, 3rem, $cCamel-4, $cWhiteD-2);
+  .header--down--arrow {
+    @include svg--a(.5rem 2rem, 4rem, $cCamel-4, $cWhiteD-2);
     @include drop--shadow;
-
-    display: inline;
-    text-align: center;
+    color: $cCamel-4;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 1rem;
-    font-size: 6rem;
+    left: 0;
+    bottom: 1em;
   }
 
   .rr--logo {

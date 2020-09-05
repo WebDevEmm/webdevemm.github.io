@@ -1,5 +1,25 @@
 @import "../0-helpers/variables";
 
+#upper--nav {
+  position: sticky;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 5px 10px 0px black;
+  top: 0;
+  z-index: 10;
+  color: $cCamel-4;
+  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  font-size: 1em;
+  padding: 1em;
+
+  a {
+    @include anchor();
+    padding-right: 1em;
+  }
+}
+
 #top--nav {
   background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   position: sticky;
@@ -66,7 +86,6 @@
 
 #bottom--nav {
   @include svg--a(2rem, 3rem, $cCamel-4, $cWhiteD-2);
-  background: $cBlue;
   position: relative;
   display: inline-flex;
   justify-self: flex-end;
@@ -74,21 +93,4 @@
   bottom: 0;
   margin-bottom: -80px;
 
-}
-
-#contact--nav {
-  position: sticky;
-  box-shadow: 0px 5px 10px 0px black;
-  top: 0;
-  z-index: 10;
-  color: $cCamel-4;
-  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-  font-size: 1em;
-  text-align: end;
-  padding: 1em;
-
-  a {
-    @include anchor();
-    margin-right: 2em;
-  }
 }

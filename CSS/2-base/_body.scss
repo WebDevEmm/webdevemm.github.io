@@ -11,17 +11,15 @@ body {
   padding: 0;
   display: grid;
   grid-template-rows: repeat(6, max-content);
-  grid-template-areas:
-
-    "contact--nav"
+  grid-template-areas: "upper--nav"
     "header"
     "top--nav"
     "main"
     "bottom--nav"
     "footer";
 
-  #contact--nav {
-    grid-area: contact--nav;
+  #upper--nav {
+    grid-area: upper--nav;
   }
 
 
@@ -46,6 +44,18 @@ body {
     grid-row: -1;
   }
 }
+
+// body::-webkit-scrollbar {
+//   width: 300px;
+// }
+
+// body::-webkit-scrollbar-track {
+//   background: red;
+// }
+
+// body::-webkit-scrollbar-thumb {
+//   background: yellow;
+// }
 
 main {
   max-width: 80vw;

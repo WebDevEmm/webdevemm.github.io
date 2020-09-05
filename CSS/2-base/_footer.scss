@@ -3,8 +3,20 @@ footer {
   background: $cSand-3 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   box-shadow: inset 0 5px 10px 2px;
   height: fit-content;
-  padding-top: 3rem;
-  margin-top: 80px;
+  padding-top: 1.5rem;
+  margin-top: 200px;
+
+  h3 {
+    font-size: 2.8rem;
+    margin-bottom: -.8em;
+    padding-bottom: 0em;
+    font-weight: 1000;
+  }
+
+  a {
+    @include anchor($cBlue, $cWhiteD-2);
+    font-size: 1.2em;
+  }
 
   .footer__img {
     position: absolute;
@@ -26,8 +38,9 @@ footer {
     flex-direction: column;
 
     h2 {
-      font-size: 4rem;
+      font-size: 5rem;
       margin: -1em auto 0em auto;
+      font-weight: 1000;
     }
 
     #footer__addresses {
@@ -41,9 +54,43 @@ footer {
       padding: 0;
     }
 
-    h3 {
-      font-size: 2.8rem;
-      margin-bottom: .5em;
+    .footer--gkg--sm {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin-top: .5em;
+      padding: 0;
+
+      position: relative;
+      color: $cBlue;
+      align-items: center;
+      margin: 0em auto;
+
+      li {
+        margin-bottom: 1em;
+
+        span {
+          font-size: 1.6em;
+          font-weight: bolder;
+        }
+
+        svg {
+          font-size: 1.2em;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background: rgba(0, 0, 0, 0.4);
+          // width: 30vw;
+          height: 1px;
+          left: -400px;
+          right: -400px;
+          margin: -1.5rem auto;
+          bottom: -1rem;
+        }
+      }
     }
 
     p {
@@ -65,45 +112,35 @@ footer {
       margin: 1.6em auto 0;
       height: min-content;
 
+      span {
+        font-size: 1.2em;
+        margin-bottom: -.6em;
+        margin-top: .6em;
+        font-weight: bolder;
+      }
+
       a {
         @include anchor($cBlue, $cWhiteD-2);
-        font-weight: bolder;
         padding: 0;
         margin: 0;
       }
-    }
 
-    .footer__icons-b {
-      @include svg--a(0.5rem, 3.5rem, $cBlue, $cWhiteD-2);
-      @include drop--shadow();
-      // position: relative;
-      color: $cSand-3;
-      align-items: center;
-      margin: 0em auto;
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        color: $cBlue;
 
-      &::after {
-        content: "";
-        position: absolute;
-        background: rgba(0, 0, 0, 0.4);
-        // width: 30vw;
-        height: 1px;
-        left: -500px;
-        right: -500px;
-        margin: -1.5rem auto;
-        bottom: -1rem;
+        li {
+          margin-bottom: .5em;
+
+          svg {
+            font-size: 1.2em;
+          }
+        }
       }
-
-      // .fa-facebook-square {
-      //   color: #3b5999;
-      // }
-
-      // .fa-instagram-square {
-      //   color: #e4405f;
-      // }
-
-      // .fa-twitter-square {
-      //   color: #55acee;
-      // }
     }
 
     .footer__logos-rr-smls {
