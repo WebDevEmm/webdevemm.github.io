@@ -2,15 +2,15 @@
 
 #upper--nav {
   position: sticky;
+  z-index: 10;
   display: inline-flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 0px 5px 10px 0px black;
   top: 0;
-  z-index: 10;
-  color: $cCamel-4;
-  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  color: $colorText-1;
+  background: $colorBg-1 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   font-size: 1em;
   padding: 1em;
 
@@ -21,7 +21,7 @@
 }
 
 #top--nav {
-  background: $cBlue linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background: $colorBg-1 linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   position: sticky;
   top: 51px;
   bottom: 0;
@@ -46,7 +46,7 @@
     margin: 0;
 
     a {
-      @include anchor($cCafe-5, $cWhiteD-2);
+      @include anchor($hlColor-1_1, $hlColor-1_2);
       padding: 0;
     }
   }
@@ -85,13 +85,11 @@
 }
 
 #bottom--nav {
-  @include svg--a(2rem, 3rem, $cCamel-4, $cWhiteD-2);
+  @include svg--a(2rem, 3rem, $hlColor-1_1, $hlColor-1_2);
   position: relative;
   display: inline-flex;
   justify-self: flex-end;
   position: sticky;
   bottom: 0;
   margin-bottom: -80px;
-  z-index: 10;
-
 }

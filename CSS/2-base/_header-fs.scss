@@ -36,7 +36,7 @@ header {
 
   p {
     font-size: 1.5rem;
-    color: $cEgg-1;
+    color: $colorText-1;
     margin: 0;
   }
 
@@ -71,7 +71,7 @@ header {
   // ICONS
 
   .header--icons {
-    @include svg--a(.5rem 2rem, 3rem, $cCamel-4, $cWhiteD-2);
+    @include svg--a(.5rem 2rem, 3rem, $hlColor-1_1, $hlColor-1_2);
     @include drop--shadow;
     display: flex;
     flex-direction: column;
@@ -84,9 +84,8 @@ header {
   }
 
   .header--down--arrow {
-    @include svg--a(.5rem 2rem, 4rem, $cCamel-4, $cWhiteD-2);
+    @include svg--a(.5rem 2rem, 4rem, $hlColor-1_1, $hlColor-1_2);
     @include drop--shadow;
-    color: $cCamel-4;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -103,6 +102,7 @@ header {
     width: 200px;
     margin: 0;
     padding: 0.5rem;
+    border-radius: 0;
   }
 }
 

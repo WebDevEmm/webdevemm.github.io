@@ -53,7 +53,7 @@
     }
 
     p {
-      color: $cEgg-1;
+      color: $colorText-1;
       font-size: 2.4em;
     }
 
@@ -67,11 +67,11 @@
       margin: 2em auto;
 
       p {
-        color: $cBlue;
+        color: $colorText-2;
         font-size: 2rem;
 
         a {
-          @include anchor($color-1: $cUmber-8, $color-2: $cEgg-1);
+          @include anchor($color-1: $hlColor-2_1, $color-2: $hlColor-2_2);
           padding: 0;
           margin: 0;
           font-size: 1.2em;
@@ -112,7 +112,7 @@
     }
 
     address {
-      color: $cCamel-4;
+      color: $colorText-1;
       line-height: 2rem;
       padding-bottom: 1.5em;
 
@@ -130,7 +130,7 @@
       width: 400px;
       height: 300px;
       font-style: italic;
-      color: $cBlue;
+      color: $colorText-2;
 
       display: flex;
       justify-content: center;
@@ -171,7 +171,7 @@
         @include card--shadow--small;
         position: relative;
         font-size: 1.5rem;
-        color: $cBlue;
+        color: $colorText-2;
         border-radius: 10px;
         width: 500px;
         display: flex;
@@ -186,6 +186,7 @@
 // CONTACT US FORM
 #contact--form--section {
   p {
+    color: $colorText-1;
     font-size: 2rem;
   }
 
@@ -194,10 +195,10 @@
     display: grid;
     grid-template-rows: repeat(3, fit-content);
     border-radius: 10px;
-    background: $cSand-3;
-    color: $cBlue;
+    background: $colorBg-2;
+    color: $colorText-2;
     margin: 2em 0 1em;
-    padding: .5em 1em;
+    padding: 0em 1em 2em;
     font-size: 1.5rem;
     font-weight: bold;
 
@@ -212,20 +213,14 @@
       justify-items: center;
       align-items: center;
       padding: 1em;
-      color: $cBlue;
+      color: $colorText-2;
 
       margin: 1em auto 1.2em;
 
       p {
         width: 100%;
-        color: $cBlue;
+        color: $colorText-2;
         font-size: 2rem;
-      }
-
-      svg {
-        margin: 0.5rem;
-        font-size: 3rem;
-        color: $cBlue;
       }
     }
 
@@ -255,26 +250,26 @@
 
     // SUBMIT
     #submit {
-      width: fit-content;
       padding: .66em 6em;
       font-size: 1em;
       justify-self: center;
       margin-top: 1.5em;
-      background: $cCamel-4;
-      color: $cBlue;
+
+      background: #5a473c;
+      color: #f1ead4;
+
       font-weight: 500;
       font-size: 1.6em;
       border: none;
       border-radius: 10px;
-      box-shadow: 0px 0px 6px -1px;
+      box-shadow: 0px 0px 6px -2.5px black;
 
       &:hover {
-        box-shadow: inset 0px 0px 6px -1px;
-        background: linear-gradient(rgba(0, 0, 0, .01)), $cCamel-4;
-
-        // background: $cBlue;
+        box-shadow: inset 0px 0px 6px -1px black;
+        background: linear-gradient(rgba(0, 0, 0, .1)), #5a473c;
         cursor: pointer;
       }
+
     }
 
     // FORM FOOTER
@@ -289,6 +284,10 @@
         padding: 0;
       }
     }
+  }
+
+  svg {
+    font-size: 2em;
   }
 }
 

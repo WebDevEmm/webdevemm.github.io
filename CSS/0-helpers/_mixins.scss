@@ -16,7 +16,7 @@
   }
 }
 
-@mixin anchor($color-1 : $cWhiteD-2, $color-2 : $cCamel-4) {
+@mixin anchor($color-1 : $hlColor-1_1, $color-2 : $hlColor-1_2) {
 
   &:any-link {
     position: relative;
