@@ -41,11 +41,11 @@ body {
   grid-template-rows: repeat(6, max-content);
   grid-template-columns: 1fr;
   grid-template-areas: "upper--nav"
-    "header"
-    "top--nav"
-    "main"
-    "bottom--nav"
-    "footer";
+    " header "
+    " top--nav "
+    " main "
+    " bottom--nav "
+    " footer ";
 }
 
 // body::-webkit-scrollbar {

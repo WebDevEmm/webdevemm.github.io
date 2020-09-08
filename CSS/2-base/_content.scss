@@ -2,6 +2,7 @@
 .content {
   grid-column: 2/3;
   justify-items: center;
+  margin: auto;
 
   p {
     text-align: center;
@@ -155,20 +156,23 @@
   .why--us {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 1em;
 
     .why--us--box {
       display: flex;
       position: relative;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: auto;
+
 
       .why--us--box--h3 {
         top: 0;
         height: fit-content;
-        margin: auto;
         text-align: center;
-        font-size: 3rem;
+        font-size: 3em;
       }
 
       .why--us--box--p {
