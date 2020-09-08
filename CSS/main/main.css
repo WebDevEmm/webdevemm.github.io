@@ -1106,7 +1106,7 @@ section {
   font-size: 1.5rem;
   color: #2a283f;
   border-radius: 10px;
-  width: 400px;
+  width: 360px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1529,20 +1529,6 @@ footer a:hover::after, footer a:active::after, footer a:focus::after {
           transform-origin: left;
 }
 
-footer .footer__img {
-  position: absolute;
-  top: 20em;
-  left: 4em;
-}
-
-footer .footer__gkg {
-  position: absolute;
-  font-weight: bolder;
-  font-size: 6em;
-  top: .5em;
-  right: 0.5em;
-}
-
 footer .footer__grid {
   color: #2a283f;
   display: -webkit-box;
@@ -1566,11 +1552,8 @@ footer .footer__grid #footer__addresses {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: 1rem;
-  padding: 0;
+  padding-left: 5em;
   color: #2a283f;
 }
 
