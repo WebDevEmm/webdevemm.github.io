@@ -1876,4 +1876,13 @@ img {
     display: none;
   }
 }
+
+@media (max-width: 500px) {
+  #header--img {
+    display: none;
+  }
+  .footer--gkg--sm::after {
+    max-width: 100%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
