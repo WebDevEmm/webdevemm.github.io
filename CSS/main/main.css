@@ -1683,9 +1683,10 @@ footer .footer__grid .footer--gkg--sm li::after {
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
+  min-width: 100%;
+  max-width: calc(100% + 50px);
   height: 1px;
-  left: -100px;
-  right: -100px;
+  left: 0;
   margin: -1.5rem auto;
   bottom: -1rem;
 }
