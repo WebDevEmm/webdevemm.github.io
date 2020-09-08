@@ -2,7 +2,7 @@
   display: grid;
   position: relative;
 
-  grid-template-columns: 30% auto auto 30%;
+  grid-template-columns: 30% repeat(2, auto) 30%;
   grid-template-rows: 2rem repeat(3, min-content) 3rem;
   grid-template-areas:
 

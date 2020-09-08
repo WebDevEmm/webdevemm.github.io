@@ -1,10 +1,17 @@
-@media (max-width: 790px) {
-  header {
-    img {
-      display: none;
-    }
-    .header--col {
-      width: 300px;
-    }
+@media (max-width: 1230px) {
+  .header--disp--ptn {
+    grid-template-columns: 20% auto auto 20%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header--disp--ptn {
+    grid-template-columns: 10% auto auto 10%;
+  }
+}
+
+@media (max-width: 830px) {
+  #header--img {
+    display: none;
   }
 }

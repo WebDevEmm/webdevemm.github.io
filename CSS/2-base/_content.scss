@@ -98,6 +98,7 @@
 #about--section {
   .agents {
     display: flex;
+    gap: 1em;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
@@ -123,9 +124,6 @@
 
     .bio {
       @include shadow--container();
-    }
-
-    p {
       border-radius: 20px;
       width: 400px;
       height: 300px;
@@ -139,8 +137,9 @@
       box-sizing: border-box;
       border-radius: 20px;
       z-index: -1;
-      position: sticky;
-      top: 0;
+      // position: sticky;
+      position: relative;
+      // top: 0;
       bottom: 0;
     }
   }
@@ -155,15 +154,16 @@
 
     .why--us--box {
       display: flex;
+      position: relative;
       flex-direction: column;
       align-items: center;
 
       .why--us--box--h3 {
-        font-size: 3rem;
         top: 0;
         height: fit-content;
-        margin: 0rem 0;
+        margin: auto;
         text-align: center;
+        font-size: 3rem;
       }
 
       .why--us--box--p {
@@ -173,10 +173,14 @@
         font-size: 1.5rem;
         color: $colorText-2;
         border-radius: 10px;
-        width: 500px;
+        width: 400px;
         display: flex;
+
         justify-content: center;
         align-items: center;
+        align-self: bottom;
+
+        p {}
 
       }
     }
@@ -215,7 +219,7 @@
       padding: 1em;
       color: $colorText-2;
 
-      margin: 1em auto 1.2em;
+      margin: 1em 0 1.2em;
 
       p {
         width: 100%;
@@ -250,7 +254,7 @@
 
     // SUBMIT
     #submit {
-      padding: .66em 6em;
+      padding: 5% 30%;
       font-size: 1em;
       justify-self: center;
       margin-top: 1.5em;
@@ -264,12 +268,17 @@
       border-radius: 10px;
       box-shadow: 0px 0px 6px -2.5px black;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         box-shadow: inset 0px 0px 6px -1px black;
         background: linear-gradient(rgba(0, 0, 0, .1)), #5a473c;
         cursor: pointer;
       }
 
+      &:focus {
+        outline: 3px dotted #9d6541;
+      }
     }
 
     // FORM FOOTER

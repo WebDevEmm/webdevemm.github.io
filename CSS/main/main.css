@@ -13,12 +13,6 @@ body {
   background: #2a283f;
   margin: 0;
   padding: 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (max-content)[6];
-      grid-template-rows: repeat(6, -webkit-max-content);
-      grid-template-rows: repeat(6, max-content);
-      grid-template-areas: "upper--nav" "header" "top--nav" "main" "bottom--nav" "footer";
 }
 
 body #upper--nav {
@@ -56,6 +50,17 @@ body footer {
   -ms-grid-column: 1;
   grid-area: footer;
   grid-row: -1;
+}
+
+.main--body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (max-content)[6];
+      grid-template-rows: repeat(6, -webkit-max-content);
+      grid-template-rows: repeat(6, max-content);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "upper--nav" "header" "top--nav" "main" "bottom--nav" "footer";
 }
 
 main {
@@ -131,8 +136,8 @@ h6 {
   display: -ms-grid;
   display: grid;
   position: relative;
-  -ms-grid-columns: 30% auto auto 30%;
-      grid-template-columns: 30% auto auto 30%;
+  -ms-grid-columns: 30% (auto)[2] 30%;
+      grid-template-columns: 30% repeat(2, auto) 30%;
   -ms-grid-rows: 2rem (min-content)[3] 3rem;
       grid-template-rows: 2rem repeat(3, -webkit-min-content) 3rem;
       grid-template-rows: 2rem repeat(3, min-content) 3rem;
@@ -983,6 +988,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -1102,9 +1108,6 @@ section {
   border-radius: 20px;
   position: absolute;
   z-index: -2;
-}
-
-#about--section .agents p {
   border-radius: 20px;
   width: 400px;
   height: 300px;
@@ -1123,9 +1126,7 @@ section {
           box-sizing: border-box;
   border-radius: 20px;
   z-index: -1;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: relative;
   bottom: 0;
 }
 
@@ -1141,6 +1142,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1151,13 +1153,13 @@ section {
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--h3 {
-  font-size: 3rem;
   top: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 0rem 0;
+  margin: auto;
   text-align: center;
+  font-size: 3rem;
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--p {
@@ -1177,7 +1179,7 @@ section {
   font-size: 1.5rem;
   color: #2a283f;
   border-radius: 10px;
-  width: 500px;
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1187,6 +1189,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: bottom;
+      align-self: bottom;
 }
 
 #contact--form--section p {
@@ -1226,7 +1230,7 @@ section {
           align-items: center;
   padding: 1em;
   color: #2a283f;
-  margin: 1em auto 1.2em;
+  margin: 1em 0 1.2em;
 }
 
 #contact--form--section form .form--header p, #contact--form--section form .form--footer p {
@@ -1267,7 +1271,7 @@ section {
 }
 
 #contact--form--section form #submit {
-  padding: .66em 6em;
+  padding: 5% 30%;
   font-size: 1em;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -1282,12 +1286,16 @@ section {
           box-shadow: 0px 0px 6px -2.5px black;
 }
 
-#contact--form--section form #submit:hover {
+#contact--form--section form #submit:hover, #contact--form--section form #submit:active, #contact--form--section form #submit:focus {
   -webkit-box-shadow: inset 0px 0px 6px -1px black;
           box-shadow: inset 0px 0px 6px -1px black;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1))), #5a473c;
   background: linear-gradient(rgba(0, 0, 0, 0.1)), #5a473c;
   cursor: pointer;
+}
+
+#contact--form--section form #submit:focus {
+  outline: 3px dotted #9d6541;
 }
 
 #contact--form--section form .form--footer {
@@ -1676,8 +1684,8 @@ footer .footer__grid .footer--gkg--sm li::after {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   height: 1px;
-  left: -400px;
-  right: -400px;
+  left: -100px;
+  right: -100px;
   margin: -1.5rem auto;
   bottom: -1rem;
 }
@@ -1848,12 +1856,23 @@ img {
           box-shadow: 0px 0px 4px 1px black;
 }
 
-@media (max-width: 790px) {
-  header img {
-    display: none;
+@media (max-width: 1230px) {
+  .header--disp--ptn {
+    -ms-grid-columns: 20% auto auto 20%;
+        grid-template-columns: 20% auto auto 20%;
   }
-  header .header--col {
-    width: 300px;
+}
+
+@media (max-width: 1000px) {
+  .header--disp--ptn {
+    -ms-grid-columns: 10% auto auto 10%;
+        grid-template-columns: 10% auto auto 10%;
+  }
+}
+
+@media (max-width: 830px) {
+  #header--img {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

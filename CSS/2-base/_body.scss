@@ -9,19 +9,10 @@ body {
   background: $cBlue;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-rows: repeat(6, max-content);
-  grid-template-areas: "upper--nav"
-    "header"
-    "top--nav"
-    "main"
-    "bottom--nav"
-    "footer";
 
   #upper--nav {
     grid-area: upper--nav;
   }
-
 
   header {
     grid-area: header;
@@ -43,6 +34,18 @@ body {
     grid-area: footer;
     grid-row: -1;
   }
+}
+
+.main--body {
+  display: grid;
+  grid-template-rows: repeat(6, max-content);
+  grid-template-columns: 1fr;
+  grid-template-areas: "upper--nav"
+    "header"
+    "top--nav"
+    "main"
+    "bottom--nav"
+    "footer";
 }
 
 // body::-webkit-scrollbar {
