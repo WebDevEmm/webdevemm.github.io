@@ -73,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #926c4b;
+  color: #a67a62;
   font-family: forum;
   font-weight: 1000;
 }
@@ -136,36 +136,36 @@ h6 {
   display: -ms-grid;
   display: grid;
   position: relative;
-  -ms-grid-columns: 30% (auto)[2] 30%;
-      grid-template-columns: 30% repeat(2, auto) 30%;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
   -ms-grid-rows: 2rem (min-content)[3] 3rem;
       grid-template-rows: 2rem repeat(3, -webkit-min-content) 3rem;
       grid-template-rows: 2rem repeat(3, min-content) 3rem;
-      grid-template-areas: "...... ......     ...... ......" "...... title      img    ......" "...... translate  img    ......" "...... text       text   ......" "...... ......     ...... ......";
+      grid-template-areas: " ......     ...... " " title      img    " " slogan     img    " " text       text   " " ......     ...... ";
 }
 
 .header--disp--ptn #header--title {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: title;
 }
 
-.header--disp--ptn #header--translate {
+.header--disp--ptn .slogan {
   -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: translate;
+  -ms-grid-column: 1;
+  grid-area: slogan;
 }
 
 .header--disp--ptn #header--img {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: img;
 }
 
 .header--disp--ptn #header--text {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: text;
 }
@@ -189,105 +189,34 @@ header #header--title {
   font-size: 6rem;
   margin: 0;
   padding: 1rem;
+  margin-left: auto;
+  line-height: .9em;
 }
 
-header #header--translate {
-  display: inline-block;
-  padding: 1rem;
-}
-
-header #header--translate a:-webkit-any-link {
-  position: relative;
-  text-decoration: none;
-  color: #eee6c6;
-  z-index: 1;
-}
-
-header #header--translate a:-moz-any-link {
-  position: relative;
-  text-decoration: none;
-  color: #eee6c6;
-  z-index: 1;
-}
-
-header #header--translate a:any-link {
-  position: relative;
-  text-decoration: none;
-  color: #eee6c6;
-  z-index: 1;
-}
-
-header #header--translate a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-header #header--translate a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-header #header--translate a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-header #header--translate a:hover, header #header--translate a:active, header #header--translate a:focus {
-  outline: none;
-  color: #c3a082;
-}
-
-header #header--translate a:hover::after, header #header--translate a:active::after, header #header--translate a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+header .slogan {
+  margin-top: -.4em;
+  padding-left: 3em;
+  margin-left: auto;
+  font-style: italic;
+  font-size: 1.5em;
+  font-family: forum;
+  font-weight: 1000;
 }
 
 header #header--img {
   margin: auto 1rem -0.02rem 1rem;
+  margin-right: auto;
 }
 
 header #header--text {
-  display: inline;
+  display: block;
+  max-width: 480px;
   padding: 2em 3em 2.4em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 header .header--icons {
@@ -332,6 +261,7 @@ header .header--down--arrow {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  margin-top: 10em;
   right: 0;
   left: 0;
   bottom: 1em;
@@ -407,9 +337,6 @@ header .rr--logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-shadow: 0px 5px 10px 0px black;
           box-shadow: 0px 5px 10px 0px black;
   top: 0;
@@ -503,10 +430,17 @@ header .rr--logo {
 }
 
 #upper--nav a:hover::after, #upper--nav a:active::after, #upper--nav a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+
+#upper--nav #upper--nav--phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: auto;
 }
 
 #top--nav {
@@ -625,8 +559,6 @@ header .rr--logo {
 }
 
 #main--nav .gkg a:hover::after, #main--nav .gkg a:active::after, #main--nav .gkg a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -735,8 +667,6 @@ header .rr--logo {
 }
 
 #main--nav li a:hover::after, #main--nav li a:active::after, #main--nav li a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -963,8 +893,6 @@ section {
 }
 
 #welcome .content .welcome--container p a:hover::after, #welcome .content .welcome--container p a:active::after, #welcome .content .welcome--container p a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -989,8 +917,6 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 1em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1091,10 +1017,12 @@ section {
 }
 
 #about--section .agents address a:hover::after, #about--section .agents address a:active::after, #about--section .agents address a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+
+#about--section .agents .bio--svg {
+  display: none;
 }
 
 #about--section .agents .bio {
@@ -1124,7 +1052,6 @@ section {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 20px;
   z-index: -1;
   position: relative;
   bottom: 0;
@@ -1168,7 +1095,7 @@ section {
   -webkit-box-shadow: inset 0px 8px 10px 2px black;
           box-shadow: inset 0px 8px 10px 2px black;
   background: #d0baa7;
-  width: 500px;
+  width: 300px;
   height: 150px;
   border-radius: 10px;
   position: absolute;
@@ -1500,6 +1427,14 @@ footer {
   margin-top: 200px;
 }
 
+footer h2 {
+  font-size: 5rem;
+  margin: -1em auto 0em;
+  font-weight: 1000;
+  color: #2a283f;
+  letter-spacing: -2px;
+}
+
 footer h3 {
   font-size: 2.8rem;
   margin-bottom: -.8em;
@@ -1590,8 +1525,6 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 footer a:hover::after, footer a:active::after, footer a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -1621,12 +1554,6 @@ footer .footer__grid {
           flex-direction: column;
 }
 
-footer .footer__grid h2 {
-  font-size: 5rem;
-  margin: -1em auto 0em auto;
-  font-weight: 1000;
-}
-
 footer .footer__grid #footer__addresses {
   margin: 0em auto 2em auto;
   margin-top: 1em;
@@ -1644,6 +1571,7 @@ footer .footer__grid #footer__addresses {
           justify-content: center;
   font-size: 1rem;
   padding: 0;
+  color: #2a283f;
 }
 
 footer .footer__grid .footer--gkg--sm {
@@ -1809,8 +1737,6 @@ footer .footer__grid address a:hover, footer .footer__grid address a:active, foo
 }
 
 footer .footer__grid address a:hover::after, footer .footer__grid address a:active::after, footer .footer__grid address a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
@@ -1857,32 +1783,50 @@ img {
           box-shadow: 0px 0px 4px 1px black;
 }
 
-@media (max-width: 1230px) {
-  .header--disp--ptn {
-    -ms-grid-columns: 20% auto auto 20%;
-        grid-template-columns: 20% auto auto 20%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .header--disp--ptn {
-    -ms-grid-columns: 10% auto auto 10%;
-        grid-template-columns: 10% auto auto 10%;
-  }
-}
-
-@media (max-width: 830px) {
-  #header--img {
+@media screen and (max-width: 1240px) {
+  #bottom--nav {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 940px) {
   #header--img {
     display: none;
   }
-  .footer--gkg--sm::after {
-    max-width: 100%;
+  header .rr--logo {
+    bottom: 6.8rem;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .agents {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  #upper--nav #upper--nav--phones {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #upper--nav em {
+    margin: auto auto auto 0;
+  }
+  #top--nav {
+    top: 70px;
+  }
+  #top--nav .ddm {
+    display: none;
+  }
+  footer h2 {
+    margin: -1em auto 0em;
   }
 }
 /*# sourceMappingURL=main.css.map */

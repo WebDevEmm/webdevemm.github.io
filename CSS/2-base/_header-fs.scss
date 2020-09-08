@@ -2,22 +2,22 @@
   display: grid;
   position: relative;
 
-  grid-template-columns: 30% repeat(2, auto) 30%;
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: 2rem repeat(3, min-content) 3rem;
   grid-template-areas:
 
-    "...... ......     ...... ......"
-    "...... title      img    ......"
-    "...... translate  img    ......"
-    "...... text       text   ......"
-    "...... ......     ...... ......";
+    " ......     ...... "
+    " title      img    "
+    " slogan     img    "
+    " text       text   "
+    " ......     ...... ";
 
   #header--title {
     grid-area: title;
   }
 
-  #header--translate {
-    grid-area: translate;
+  .slogan {
+    grid-area: slogan;
   }
 
   #header--img {
@@ -48,24 +48,36 @@ header {
     font-size: 6rem;
     margin: 0;
     padding: 1rem;
+    margin-left: auto;
+    line-height: .9em;
+
   }
 
-  #header--translate {
-    display: inline-block;
-    padding: 1rem;
-
-    a {
-      @include anchor($cWhiteD-2, $cCamel-4);
-    }
+  .slogan {
+    margin-top: -.4em;
+    padding-left: 3em;
+    margin-left: auto;
+    font-style: italic;
+    font-size: 1.5em;
+    font-family: forum;
+    font-weight: 1000;
   }
 
   #header--img {
     margin: auto 1rem -0.02rem 1rem;
+    margin-right: auto;
+
   }
 
   #header--text {
-    display: inline;
+    display: block;
+    max-width: 480px;
     padding: 2em 3em 2.4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    text-align: center;
+    word-wrap: break-word;
   }
 
   // ICONS
@@ -89,6 +101,7 @@ header {
     display: flex;
     justify-content: center;
     position: absolute;
+    margin-top: 10em;
     right: 0;
     left: 0;
     bottom: 1em;

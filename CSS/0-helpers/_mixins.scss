@@ -38,7 +38,6 @@
     }
   }
 
-
   &:hover,
   &:active,
   &:focus {
@@ -46,7 +45,7 @@
     color: $color-2;
 
     &::after {
-      transform: scaleX(1);
+      // transform: scaleX(1);
       transform-origin: left;
     }
   }
