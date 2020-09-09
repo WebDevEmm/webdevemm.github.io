@@ -10,6 +10,10 @@
   }
 
   header {
+    #header--text {
+      margin-bottom: 4em;
+    }
+
     .rr--logo {
       bottom: 6.8rem;
       right: 0;
@@ -40,7 +44,7 @@
   }
 
   #top--nav {
-    top: 68px;
+    top: 60px;
 
     .ddm {
       display: none;

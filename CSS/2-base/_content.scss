@@ -12,6 +12,7 @@
   .section--title {
     position: relative;
     padding-bottom: 1.5rem;
+
     box-shadow: 0px 12px 0px -5px currentColor;
     z-index: 1;
 
@@ -44,18 +45,17 @@
 }
 
 // WELCOME
-#welcome {
+#welcome--section {
   position: relative;
 
   .content {
-
     .section--title {
       padding-top: 1em;
     }
 
     p {
       color: $colorText-1;
-      font-size: 2.4em;
+      font-size: 2.2em;
     }
 
     .welcome--container {
@@ -69,7 +69,7 @@
 
       p {
         color: $colorText-2;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
         a {
           @include anchor($color-1: $hlColor-2_1, $color-2: $hlColor-2_2);
@@ -97,6 +97,7 @@
 
 // AGENTS 
 #about--section {
+  box-sizing: border-box;
 
   .agents {
     display: flex;
@@ -109,7 +110,7 @@
     z-index: 1;
 
     img {
-      margin: 1.5rem 0 0;
+      margin: 1.5em 0 0;
       background: white;
       border-radius: 15px;
     }
@@ -131,7 +132,7 @@
     .bio {
       @include shadow--container();
       border-radius: 20px;
-      width: 400px;
+      width: 380px;
       height: 300px;
       font-style: italic;
       color: $colorText-2;
@@ -146,21 +147,25 @@
       position: relative;
       // top: 0;
       bottom: 0;
-
     }
   }
 }
 
 // WHY US
 #why--us--section {
+  box-sizing: border-box;
+
   .why--us {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     grid-gap: 1em;
 
     .why--us--box {
       display: flex;
       position: relative;
+
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -173,16 +178,18 @@
         height: fit-content;
         text-align: center;
         font-size: 3em;
+        width: 400px;
+        height: 200px;
       }
 
       .why--us--box--p {
-        @include shadow--container($width: 300px, $height:150px, $border-radius: 10px);
+        @include shadow--container($width: 400px, $height:150px, $border-radius: 10px);
         @include card--shadow--small;
         position: relative;
         font-size: 1.5rem;
         color: $colorText-2;
         border-radius: 10px;
-        width: 360px;
+        width: 400px;
         display: flex;
 
         justify-content: center;
@@ -195,118 +202,117 @@
 
 // CONTACT US FORM
 #contact--form--section {
-  p {
-    color: $colorText-1;
-    font-size: 2rem;
+  color: $colorText-1;
+  font-size: 2rem;
+
+}
+
+
+form {
+  @include card--shadow--large;
+  display: grid;
+  grid-template-rows: repeat(3, fit-content);
+  border-radius: 10px;
+  background: $colorBg-2;
+  color: $colorText-2;
+  margin: 2em 0 1em;
+  padding: 0em 1em 2em;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  label {
+    cursor: pointer;
   }
 
-  form {
-    @include card--shadow--large;
-    display: grid;
-    grid-template-rows: repeat(3, fit-content);
-    border-radius: 10px;
-    background: $colorBg-2;
+  // FORM HEADER
+  .form--header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-items: center;
+    align-items: center;
+    padding: 1em;
     color: $colorText-2;
-    margin: 2em 0 1em;
-    padding: 0em 1em 2em;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
 
-    label {
+    margin: 1em 0 1.2em;
+
+    p {
+      width: 100%;
+      color: $colorText-2;
+      font-size: 1.5rem;
+    }
+  }
+
+  // FORM DATA 
+  .form--data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .form--col {
+      justify-content: flex-start;
+      width: 260px;
+      margin: 0.5rem;
+
+      textarea {
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 0.5rem;
+      }
+
+      .form--time--option {
+        font-weight: lighter;
+        font-size: large;
+      }
+    }
+  }
+
+  // SUBMIT
+  #submit {
+    padding: 5% 30%;
+    font-size: 1em;
+    justify-self: center;
+    margin-top: 1.5em;
+
+    background: #5a473c;
+    color: #f1ead4;
+
+    font-weight: 500;
+    font-size: 1.6em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px -2.5px black;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: inset 0px 0px 6px -1px black;
+      background: linear-gradient(rgba(0, 0, 0, .1)), #5a473c;
       cursor: pointer;
     }
 
-    // FORM HEADER
-    .form--header {
-      grid-column: 1/-1;
-      grid-row: 1/2;
-      justify-items: center;
-      align-items: center;
-      padding: 1em;
-      color: $colorText-2;
-
-      margin: 1em 0 1.2em;
-
-      p {
-        width: 100%;
-        color: $colorText-2;
-        font-size: 2rem;
-      }
-    }
-
-    // FORM DATA 
-    .form--data {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-
-      .form--col {
-        justify-content: flex-start;
-        width: 260px;
-        margin: 0.5rem;
-
-        textarea {
-          box-sizing: border-box;
-          border-radius: 10px;
-          padding: 0.5rem;
-        }
-
-        .form--time--option {
-          font-weight: lighter;
-          font-size: large;
-        }
-      }
-    }
-
-    // SUBMIT
-    #submit {
-      padding: 5% 30%;
-      font-size: 1em;
-      justify-self: center;
-      margin-top: 1.5em;
-
-      background: #5a473c;
-      color: #f1ead4;
-
-      font-weight: 500;
-      font-size: 1.6em;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0px 0px 6px -2.5px black;
-
-      &:hover,
-      &:active,
-      &:focus {
-        box-shadow: inset 0px 0px 6px -1px black;
-        background: linear-gradient(rgba(0, 0, 0, .1)), #5a473c;
-        cursor: pointer;
-      }
-
-      &:focus {
-        outline: 3px dotted #9d6541;
-      }
-    }
-
-    // FORM FOOTER
-    .form--footer {
-      @extend .form--header;
-      grid-row: 4/5;
-      font-style: italic;
-      justify-content: center;
-      align-content: center;
-
-      p {
-        padding: 0;
-      }
+    &:focus {
+      outline: 3px dotted #9d6541;
     }
   }
 
-  svg {
-    font-size: 2em;
+  // FORM FOOTER
+  .form--footer {
+    @extend .form--header;
+    grid-row: 4/5;
+    font-style: italic;
+    justify-content: center;
+    align-content: center;
+
+    p {
+      padding: 0;
+    }
   }
 }
 
-// BLOGS
+
+
+// BLOG 
 #blogs--section {
   .blog--flex {
     @include blog--anchor;

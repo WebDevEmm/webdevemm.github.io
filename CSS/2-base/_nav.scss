@@ -14,6 +14,7 @@
   font-size: 1em;
   padding: 1em;
 
+
   a {
     @include anchor();
     margin-right: 1em;
@@ -74,14 +75,14 @@
       font-size: 1em;
     }
 
-    .buy {
+    .big--cta {
       font-size: 1.5em;
       font-weight: 500;
       font-style: italic;
       position: relative;
     }
 
-    .sell {
+    .big--cta {
       font-size: 1.5em;
       font-weight: 500;
       font-style: italic;

@@ -75,7 +75,7 @@ header {
     padding: 2em 3em 2.4em;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     text-align: center;
     word-wrap: break-word;
   }
@@ -101,7 +101,6 @@ header {
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-top: 10em;
     right: 0;
     left: 0;
     bottom: 1em;
@@ -119,9 +118,11 @@ header {
   }
 }
 
-.header--bg {
+.main--header {
   background: url("../../Images/house--bg.jpeg");
+}
 
+.header--bg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
