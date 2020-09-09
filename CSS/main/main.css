@@ -1109,8 +1109,9 @@ section {
   height: fit-content;
   text-align: center;
   font-size: 3em;
-  width: 400px;
+  width: 320px;
   height: 200px;
+  margin-bottom: 1.2em;
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--p {
