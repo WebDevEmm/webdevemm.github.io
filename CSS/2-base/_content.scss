@@ -50,8 +50,14 @@
   position: relative;
 
   .content {
+    position: relative;
     .section--title {
       padding-top: 1em;
+    }
+
+    #welcome--img {
+      display: block;
+      margin: 1em auto;
     }
 
     p {

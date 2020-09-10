@@ -787,8 +787,17 @@ section {
   position: relative;
 }
 
+#welcome--section .content {
+  position: relative;
+}
+
 #welcome--section .content .section--title {
   padding-top: 1em;
+}
+
+#welcome--section .content #welcome--img {
+  display: block;
+  margin: 1em auto;
 }
 
 #welcome--section .content p {
@@ -1616,7 +1625,8 @@ footer .footer__flex .footer__addresses .footer--card {
   background: #2a283f linear-gradient(rgba(0, 0, 0, 0.1));
   padding: 1.8em;
   border-radius: 20px;
-  width: 460px;
+  min-width: 440px;
+  max-width: 1fr;
   margin: 2em auto;
 }
 
@@ -1829,13 +1839,6 @@ img {
 .bs {
   -webkit-box-shadow: 0px 0px 4px 1px black;
           box-shadow: 0px 0px 4px 1px black;
-}
-
-.GKG--logo {
-  position: absolute;
-  top: 5em;
-  width: 16em;
-  right: 58em;
 }
 
 .header--buy {

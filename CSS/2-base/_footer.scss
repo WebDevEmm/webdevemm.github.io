@@ -71,7 +71,8 @@ footer {
         background: $colorBg-1 linear-gradient(rgba(0, 0, 0, 0.1));
         padding: 1.8em;
         border-radius: 20px;
-        width: 460px;
+        min-width: 440px;
+        max-width: 1fr;
         margin: 2em auto;
       }
     }
