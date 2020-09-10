@@ -27,6 +27,12 @@
 @media screen and (max-width: 890px) {
   .agents {
     flex-wrap: wrap;
+
+    .bio {
+      width: 300px;
+      height: 800px;
+      padding: 1em;
+    }
   }
 
 

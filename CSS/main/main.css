@@ -751,6 +751,8 @@ section {
 .content .section--title {
   position: relative;
   padding-bottom: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
   -webkit-box-shadow: 0px 12px 0px -5px currentColor;
           box-shadow: 0px 12px 0px -5px currentColor;
   z-index: 1;
@@ -924,7 +926,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1em;
+  gap: 2em;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1045,8 +1047,8 @@ section {
   position: absolute;
   z-index: -2;
   border-radius: 20px;
-  width: 380px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   font-style: italic;
   color: #2a283f;
   display: -webkit-box;
@@ -1063,6 +1065,9 @@ section {
   z-index: -1;
   position: relative;
   bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 1em auto;
 }
 
 #why--us--section {
@@ -1949,6 +1954,11 @@ img {
   .agents {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .agents .bio {
+    width: 300px;
+    height: 800px;
+    padding: 1em;
   }
 }
 
