@@ -34,14 +34,18 @@
       padding: 1em;
     }
   }
-
-
 }
 
 @media screen and (max-width: 666px) {
+  .GKG--logo {
+    width: 12em;
+    right: 5em;
+  }
+
   #upper--nav {
     #upper--nav--phones {
       flex-direction: column;
+      top: -2px;
     }
 
     em {
@@ -50,7 +54,7 @@
   }
 
   #top--nav {
-    top: 60px;
+    top: 65px;
 
     .ddm {
       display: none;
@@ -61,12 +65,16 @@
   //   font-size: 1em;
   // }
 
-
   footer {
     h2 {
       margin: -1em auto 0em;
+      .footer__flex {
+        .footer__addresses {
+          .footer--card {
+            background: red;
+          }
+        }
+      }
     }
-
   }
-
 }

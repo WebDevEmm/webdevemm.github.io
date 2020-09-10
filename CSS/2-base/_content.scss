@@ -101,6 +101,7 @@
 
   .agents {
     display: flex;
+    flex-direction: row;
     gap: 2em;
     // flex-wrap: wrap;
     justify-content: space-evenly;
@@ -109,47 +110,49 @@
     position: relative;
     z-index: 1;
     margin: 1em auto;
-
-    img {
-      margin: 1.5em 0 0;
-      background: white;
-      border-radius: 15px;
-    }
-
-    address {
-      color: $colorText-1;
-      line-height: 2rem;
-      padding-bottom: 1.5em;
-
-      a {
-        @include anchor();
+    .agent {
+      width: 400px;
+      img {
+        margin: 1.5em 0 0;
+        background: white;
+        border-radius: 15px;
       }
-    }
 
-    .bio--svg {
-      display: none;
-    }
+      address {
+        color: $colorText-1;
+        line-height: 2rem;
+        padding-bottom: 1.5em;
 
-    .bio {
-      @include shadow--container();
-      border-radius: 20px;
-      width: 300px;
-      height: 400px;
-      font-style: italic;
-      color: $colorText-2;
+        a {
+          @include anchor();
+        }
+      }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .bio--svg {
+        display: none;
+      }
 
-      box-sizing: border-box;
-      z-index: -1;
+      .bio {
+        @include shadow--container();
+        border-radius: 20px;
+        width: 300px;
+        height: 400px;
+        font-style: italic;
+        color: $colorText-2;
 
-      position: relative;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 1em auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+        z-index: -1;
+
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 1em auto;
+      }
     }
   }
 }
