@@ -8,7 +8,7 @@ footer {
 
   h2 {
     font-size: 5rem;
-    margin: -1em auto 0em;
+    margin: -1em auto 0.5em;
     font-weight: 1000;
     color: $colorText-2;
     letter-spacing: -2px;
@@ -16,9 +16,21 @@ footer {
 
   h3 {
     font-size: 2.8rem;
-    margin-bottom: -.8em;
+    margin-bottom: -0.8em;
     padding-bottom: 0em;
     font-weight: 1000;
+    margin-top: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: currentColor;
+      height: 5px;
+      position: absolute;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+    }
   }
 
   a {
@@ -41,35 +53,34 @@ footer {
   // }
 
   .footer__grid {
-    color: $colorText-2;
+    color: $colorText-1;
     display: flex;
     flex-direction: column;
 
-
-
     #footer__addresses {
-      margin: 0em auto 2em auto;
-      margin-top: 1em;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       font-size: 1rem;
-      padding-left: 5em;
-      color: $colorText-2;
+      color: $colorText-1;
 
-      .footer--maria {}
-
-      .footer--paula {}
+      .footer--card {
+        @include card--shadow--small();
+        box-sizing: border-box;
+        background: $colorBg-1 linear-gradient(rgba(0, 0, 0, 0.1));
+        padding: 1.8em;
+        border-radius: 20px;
+        width: 450px;
+        margin: 2em auto;
+      }
     }
-
-
 
     .footer--gkg--sm {
       list-style: none;
       display: flex;
       flex-direction: column;
       margin: 0;
-      margin-top: .5em;
+      margin-top: 0.5em;
       padding: 0;
 
       position: relative;
@@ -112,7 +123,6 @@ footer {
     }
 
     address {
-
       font-size: 1.2em;
       display: flex;
       flex-direction: column;
@@ -124,14 +134,15 @@ footer {
 
       span {
         font-size: 1.2em;
-        margin-bottom: -.6em;
-        margin-top: .6em;
+        padding-bottom: 0em;
+        margin-bottom: 0.1em;
+        margin-top: 0.6em;
         font-weight: bolder;
       }
 
       a {
-        @include anchor($hlColor-2_1, $hlColor-2_2);
-        padding: 0;
+        @include anchor($hlColor-1_1, $hlColor-1_2);
+        padding-left: 0.2em;
         margin: 0;
       }
 
@@ -141,12 +152,13 @@ footer {
         flex-direction: column;
         margin: 0;
         padding: 0;
-        color: $colorText-2;
+        color: $colorText-1;
 
         li {
-          margin-bottom: .5em;
+          margin-bottom: 0.5em;
 
           svg {
+            padding-left: 0.5em;
             font-size: 1.2em;
           }
         }
