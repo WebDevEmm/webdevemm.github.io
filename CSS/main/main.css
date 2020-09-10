@@ -2018,13 +2018,15 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: -2px;
+    padding-top: 5px;
+    top: -5px;
   }
   #upper--nav em {
     margin: auto auto auto 0;
   }
   #top--nav {
     top: 65px;
+    padding-top: 20px;
   }
   #top--nav .ddm {
     display: none;

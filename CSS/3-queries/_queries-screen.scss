@@ -45,7 +45,8 @@
   #upper--nav {
     #upper--nav--phones {
       flex-direction: column;
-      top: -2px;
+      padding-top: 5px;
+      top: -5px;
     }
 
     em {
@@ -55,6 +56,7 @@
 
   #top--nav {
     top: 65px;
+    padding-top: 20px;
 
     .ddm {
       display: none;
