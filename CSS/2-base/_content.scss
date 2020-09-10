@@ -118,6 +118,7 @@
     margin: 1em auto;
     .agent {
       width: 400px;
+      margin: 0 auto;
       img {
         margin: 1.5em 0 0;
         background: white;
@@ -147,7 +148,6 @@
         color: $colorText-2;
 
         display: flex;
-        justify-content: center;
         align-items: center;
 
         box-sizing: border-box;
