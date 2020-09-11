@@ -1660,6 +1660,7 @@ footer .footer__flex .footer--gkg--sm {
 footer .footer__flex .footer--gkg--sm li {
   margin-bottom: 1em;
   font-size: 1.5em;
+  text-align: center;
 }
 
 footer .footer__flex .footer--gkg--sm li span {
@@ -2006,7 +2007,7 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     top: unset;
-    bottom: 190px;
+    bottom: 5.5em;
     left: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
