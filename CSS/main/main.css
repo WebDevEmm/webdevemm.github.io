@@ -961,8 +961,8 @@ section {
 }
 
 #about--section .agents .agent {
-  width: 380px;
   min-width: 320px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -1213,6 +1213,7 @@ form .form--header, form .form--footer {
   padding: 1em;
   color: #2a283f;
   font-size: 2rem;
+  line-height: 1em;
   margin: 1em 0 1.2em;
 }
 
@@ -2040,6 +2041,9 @@ img {
     width: 300px;
     height: 800px;
     padding: 1em;
+  }
+  #IDX--section .content {
+    margin: 0;
   }
 }
 

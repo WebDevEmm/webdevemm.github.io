@@ -1,29 +1,28 @@
 .header--buy {
-    background: url("../../Images/buy--bg.jpeg");
+  background: url("../../Images/buy--bg.jpeg");
 
-    &::before,
-    &::after {
-        content: "";
-        background: rgba(0, 0, 0, 0.74);
-        background-size: cover;
-    }
+  &::before,
+  &::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.74);
+    background-size: cover;
+  }
 }
 
 #IDX--section {
-    .section--title {
-        padding-top: 1em;
+  .section--title {
+    padding-top: 1em;
+  }
 
-    }
+  p {
+    font-size: 1.5em;
+    color: $colorText-1;
+    text-justify: center;
+  }
 
-    p {
-        font-size: 1.5em;
-        color: $colorText-1;
-        text-justify: center;
-    }
-
-    .mls--search {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
+  .mls--search {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
 }
