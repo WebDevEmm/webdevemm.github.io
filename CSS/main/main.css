@@ -2007,12 +2007,12 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     top: unset;
-    bottom: 5.5em;
+    bottom: 7em;
     left: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1em auto;
+    margin: 0 auto;
   }
   header .header--icons a:link,
   header .header--icons a:visited {
@@ -2028,7 +2028,7 @@ img {
     color: #eee6c6;
   }
   header .rr--logo {
-    bottom: 6.8rem;
+    bottom: 6.8em;
     right: 0;
     left: 0;
     margin-right: auto;
