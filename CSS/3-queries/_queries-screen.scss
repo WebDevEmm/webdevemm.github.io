@@ -60,25 +60,14 @@
       width: 12em;
     }
   }
-  .header--disp--ptn {
-    #header--title {
-      margin-right: auto;
-      margin-left: 0;
-    }
-    .slogan {
-      margin-right: auto;
-      margin-left: -1em;
-    }
-    #header--img {
-      margin-left: auto;
-      margin-right: 0;
-    }
-  }
 
   #about--section .agents {
     flex-wrap: wrap;
     flex-direction: column;
+    margin: 1em 0;
+
     .agent {
+      margin: 1em auto;
       h3 {
         margin: 0;
         padding: 0.5em;
@@ -127,8 +116,13 @@
   #welcome--section .content .welcome--container {
     width: 90%;
   }
-  #about--section .agents .agent .bio {
-    width: 90%;
+  #about--section .agents .agent {
+    img {
+      width: 50vw;
+    }
+    .bio {
+      width: 90%;
+    }
   }
 
   // .why--us--box--h3 {

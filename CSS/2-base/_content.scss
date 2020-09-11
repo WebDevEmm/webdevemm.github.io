@@ -104,7 +104,9 @@
 // AGENTS
 #about--section {
   box-sizing: border-box;
-
+  .content {
+    margin: 0;
+  }
   .agents {
     display: flex;
     flex-direction: row;
@@ -119,6 +121,7 @@
 
     .agent {
       width: 380px;
+      min-width: 320px;
       margin: 0 auto;
       img {
         margin: 1.5em 0 0;
@@ -187,13 +190,12 @@
       margin: auto;
 
       .why--us--box--h3 {
-        top: 0;
         height: 380px;
         text-align: center;
         font-size: 3em;
         width: 320px;
         height: 200px;
-        margin-bottom: 1.2em;
+        margin-bottom: 1em;
       }
 
       .why--us--box--p {

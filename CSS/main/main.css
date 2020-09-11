@@ -937,6 +937,10 @@ section {
           box-sizing: border-box;
 }
 
+#about--section .content {
+  margin: 0;
+}
+
 #about--section .agents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -958,6 +962,7 @@ section {
 
 #about--section .agents .agent {
   width: 380px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -1131,13 +1136,12 @@ section {
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--h3 {
-  top: 0;
   height: 380px;
   text-align: center;
   font-size: 3em;
   width: 320px;
   height: 200px;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--p {
@@ -2046,18 +2050,6 @@ img {
   header #header--img {
     width: 12em;
   }
-  .header--disp--ptn #header--title {
-    margin-right: auto;
-    margin-left: 0;
-  }
-  .header--disp--ptn .slogan {
-    margin-right: auto;
-    margin-left: -1em;
-  }
-  .header--disp--ptn #header--img {
-    margin-left: auto;
-    margin-right: 0;
-  }
   #about--section .agents {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2065,6 +2057,10 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 1em 0;
+  }
+  #about--section .agents .agent {
+    margin: 1em auto;
   }
   #about--section .agents .agent h3 {
     margin: 0;
@@ -2107,6 +2103,9 @@ img {
   }
   #welcome--section .content .welcome--container {
     width: 90%;
+  }
+  #about--section .agents .agent img {
+    width: 50vw;
   }
   #about--section .agents .agent .bio {
     width: 90%;
