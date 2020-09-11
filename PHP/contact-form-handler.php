@@ -1,5 +1,5 @@
 <?php
     $name = $_Post[]
-
+    
 
 ?>

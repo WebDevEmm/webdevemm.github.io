@@ -208,6 +208,12 @@ header #header--img {
   margin-right: auto;
 }
 
+header .header--logo--alt {
+  position: relative;
+  top: 2em;
+  left: 4em;
+}
+
 header #header--text {
   display: block;
   max-width: 480px;
@@ -233,7 +239,7 @@ header .header--icons {
   font-size: 2em;
   top: 20px;
   right: 0;
-  text-align: center;
+  height: 2em;
 }
 
 header .header--icons a:link,
@@ -797,7 +803,7 @@ section {
 
 #welcome--section .content #welcome--img {
   display: block;
-  margin: 1em auto;
+  margin: 1em auto -0.5em;
 }
 
 #welcome--section .content p {
@@ -951,7 +957,7 @@ section {
 }
 
 #about--section .agents .agent {
-  width: 400px;
+  width: 380px;
   margin: 0 auto;
 }
 
@@ -964,7 +970,7 @@ section {
 #about--section .agents .agent address {
   color: #f1ead4;
   line-height: 2rem;
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 #about--section .agents .agent address a:-webkit-any-link {
@@ -1067,7 +1073,7 @@ section {
   z-index: -2;
   border-radius: 20px;
   width: 300px;
-  height: 400px;
+  height: 380px;
   font-style: italic;
   color: #2a283f;
   display: -webkit-box;
@@ -1092,6 +1098,7 @@ section {
 }
 
 #why--us--section .why--us {
+  margin-top: -4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1125,9 +1132,7 @@ section {
 
 #why--us--section .why--us .why--us--box .why--us--box--h3 {
   top: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 380px;
   text-align: center;
   font-size: 3em;
   width: 320px;
@@ -1485,7 +1490,7 @@ footer h2 {
 
 footer h3 {
   font-size: 2.8rem;
-  margin-bottom: -0.8em;
+  margin-bottom: -0.2em;
   padding-bottom: 0em;
   font-weight: 1000;
   margin-top: 0;
@@ -1498,8 +1503,8 @@ footer h3::after {
   height: 5px;
   position: absolute;
   bottom: -10px;
-  left: -10px;
-  right: -10px;
+  left: 0px;
+  right: 0px;
 }
 
 footer a {
@@ -1610,7 +1615,7 @@ footer .footer__flex .footer__addresses {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 1rem;
+  font-size: 0.88em;
   color: #f1ead4;
 }
 
@@ -1621,10 +1626,9 @@ footer .footer__flex .footer__addresses .footer--card {
           box-sizing: border-box;
   background: #2a283f -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)));
   background: #2a283f linear-gradient(rgba(0, 0, 0, 0.1));
-  padding: 1.8em;
+  padding: 1.8em 1.2em;
   border-radius: 20px;
-  min-width: 440px;
-  max-width: 1fr;
+  width: 380px;
   margin: 2em auto;
 }
 
@@ -1650,6 +1654,7 @@ footer .footer__flex .footer--gkg--sm {
 
 footer .footer__flex .footer--gkg--sm li {
   margin-bottom: 1em;
+  font-size: 1.5em;
 }
 
 footer .footer__flex .footer--gkg--sm li span {
@@ -1978,14 +1983,43 @@ img {
   #bottom--nav {
     display: none;
   }
-}
-
-@media screen and (max-width: 940px) {
-  #header--img {
-    display: none;
-  }
   header #header--text {
-    margin-bottom: 4em;
+    margin-bottom: 8em;
+  }
+  header .header--logo--alt {
+    position: absolute;
+    left: unset;
+    right: 0em;
+    top: 1em;
+    width: 9em;
+  }
+  header .header--icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: unset;
+    bottom: 190px;
+    left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1em auto;
+  }
+  header .header--icons a:link,
+  header .header--icons a:visited {
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    font-size: 3rem;
+    color: #c3a082;
+  }
+  header .header--icons a:hover,
+  header .header--icons a:active,
+  header .header--icons a:focus {
+    outline: none;
+    color: #eee6c6;
   }
   header .rr--logo {
     bottom: 6.8rem;
@@ -1994,9 +2028,6 @@ img {
     margin-right: auto;
     margin-left: auto;
   }
-}
-
-@media screen and (max-width: 890px) {
   .agents {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2008,10 +2039,53 @@ img {
   }
 }
 
-@media screen and (max-width: 666px) {
-  .GKG--logo {
+@media screen and (max-width: 890px) {
+  header #header--title {
+    font-size: 5em;
+  }
+  header #header--img {
     width: 12em;
-    right: 5em;
+  }
+  .header--disp--ptn #header--title {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .header--disp--ptn .slogan {
+    margin-right: auto;
+    margin-left: -1em;
+  }
+  .header--disp--ptn #header--img {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  #about--section .agents {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about--section .agents .agent h3 {
+    margin: 0;
+    padding: 0.5em;
+  }
+  #about--section .agents .agent img {
+    width: 30vw;
+  }
+  #about--section .agents .agent address {
+    font-size: 1em;
+  }
+  #about--section .agents .agent .bio {
+    width: 300px;
+    height: 400px;
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  h1 {
+    font-size: 1em;
   }
   #upper--nav #upper--nav--phones {
     -webkit-box-orient: vertical;
@@ -2031,11 +2105,20 @@ img {
   #top--nav .ddm {
     display: none;
   }
+  #welcome--section .content .welcome--container {
+    width: 90%;
+  }
+  #about--section .agents .agent .bio {
+    width: 90%;
+  }
   footer h2 {
     margin: -1em auto 0em;
   }
   footer h2 .footer__flex .footer__addresses .footer--card {
     background: red;
+  }
+  .footer--card {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

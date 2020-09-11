@@ -2,16 +2,35 @@
   #bottom--nav {
     display: none;
   }
-}
+  // }
 
-@media screen and (max-width: 940px) {
-  #header--img {
-    display: none;
-  }
+  // @media screen and (max-width: 940px) {
+  // #header--img {
+  // }
 
   header {
     #header--text {
-      margin-bottom: 4em;
+      margin-bottom: 8em;
+    }
+    .header--logo--alt {
+      position: absolute;
+      left: unset;
+      right: 0em;
+      top: 1em;
+      width: 9em;
+    }
+
+    .header--icons {
+      @include svg--a(0.5rem 1rem, 3rem, $hlColor-1_1, $hlColor-1_2);
+      flex-direction: row;
+
+      flex-wrap: wrap;
+      top: unset;
+      bottom: 190px;
+      left: 0;
+      justify-content: center;
+
+      margin: 1em auto;
     }
 
     .rr--logo {
@@ -22,12 +41,8 @@
       margin-left: auto;
     }
   }
-}
-
-@media screen and (max-width: 890px) {
   .agents {
     flex-wrap: wrap;
-
     .bio {
       width: 300px;
       height: 800px;
@@ -36,10 +51,56 @@
   }
 }
 
+@media screen and (max-width: 890px) {
+  header {
+    #header--title {
+      font-size: 5em;
+    }
+    #header--img {
+      width: 12em;
+    }
+  }
+  .header--disp--ptn {
+    #header--title {
+      margin-right: auto;
+      margin-left: 0;
+    }
+    .slogan {
+      margin-right: auto;
+      margin-left: -1em;
+    }
+    #header--img {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  #about--section .agents {
+    flex-wrap: wrap;
+    flex-direction: column;
+    .agent {
+      h3 {
+        margin: 0;
+        padding: 0.5em;
+      }
+      img {
+        width: 30vw;
+      }
+      address {
+        font-size: 1em;
+      }
+      .bio {
+        width: 300px;
+        height: 400px;
+        padding: 1em;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 666px) {
-  .GKG--logo {
-    width: 12em;
-    right: 5em;
+  h1 {
+    font-size: 1em;
   }
 
   #upper--nav {
@@ -63,6 +124,13 @@
     }
   }
 
+  #welcome--section .content .welcome--container {
+    width: 90%;
+  }
+  #about--section .agents .agent .bio {
+    width: 90%;
+  }
+
   // .why--us--box--h3 {
   //   font-size: 1em;
   // }
@@ -78,5 +146,8 @@
         }
       }
     }
+  }
+  .footer--card {
+    padding: 0;
   }
 }
