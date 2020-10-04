@@ -380,66 +380,9 @@ header .rr--logo {
   z-index: 1;
 }
 
-#upper--nav a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#upper--nav a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#upper--nav a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 #upper--nav a:hover, #upper--nav a:active, #upper--nav a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-#upper--nav a:hover::after, #upper--nav a:active::after, #upper--nav a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #upper--nav #upper--nav--phones {
@@ -509,66 +452,9 @@ header .rr--logo {
   z-index: 1;
 }
 
-#main--nav .gkg a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#main--nav .gkg a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#main--nav .gkg a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 #main--nav .gkg a:hover, #main--nav .gkg a:active, #main--nav .gkg a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-#main--nav .gkg a:hover::after, #main--nav .gkg a:active::after, #main--nav .gkg a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #main--nav ul {
@@ -617,66 +503,9 @@ header .rr--logo {
   z-index: 1;
 }
 
-#main--nav li a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#main--nav li a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#main--nav li a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 #main--nav li a:hover, #main--nav li a:active, #main--nav li a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-#main--nav li a:hover::after, #main--nav li a:active::after, #main--nav li a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #main--nav li .big--cta {
@@ -747,6 +576,7 @@ section {
   grid-column: 2/3;
   justify-items: center;
   margin: auto;
+  width: 100%;
 }
 
 .content p {
@@ -789,6 +619,12 @@ section {
           transform: rotate(45deg);
 }
 
+.content .subtext {
+  color: #f1ead4;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
 #welcome--section {
   position: relative;
 }
@@ -804,11 +640,6 @@ section {
 #welcome--section .content #welcome--img {
   display: block;
   margin: 1em auto -0.5em;
-}
-
-#welcome--section .content p {
-  color: #f1ead4;
-  font-size: 2.2em;
 }
 
 #welcome--section .content .welcome--container {
@@ -855,66 +686,9 @@ section {
   z-index: 1;
 }
 
-#welcome--section .content .welcome--container p a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#welcome--section .content .welcome--container p a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#welcome--section .content .welcome--container p a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 #welcome--section .content .welcome--container p a:hover, #welcome--section .content .welcome--container p a:active, #welcome--section .content .welcome--container p a:focus {
   outline: none;
   color: #a67a62ff;
-}
-
-#welcome--section .content .welcome--container p a:hover::after, #welcome--section .content .welcome--container p a:active::after, #welcome--section .content .welcome--container p a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #welcome--section .content .welcome--container .fa-gift {
@@ -999,66 +773,9 @@ section {
   z-index: 1;
 }
 
-#about--section .agents .agent address a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#about--section .agents .agent address a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-#about--section .agents .agent address a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 #about--section .agents .agent address a:hover, #about--section .agents .agent address a:active, #about--section .agents .agent address a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-#about--section .agents .agent address a:hover::after, #about--section .agents .agent address a:active::after, #about--section .agents .agent address a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #about--section .agents .agent .bio--svg {
@@ -1077,8 +794,9 @@ section {
   position: absolute;
   z-index: -2;
   border-radius: 20px;
-  width: 300px;
-  height: 380px;
+  width: 400px;
+  height: 460px;
+  padding: 1em;
   font-style: italic;
   color: #2a283f;
   display: -webkit-box;
@@ -1095,6 +813,7 @@ section {
   left: 0;
   right: 0;
   margin: 1em auto;
+  line-height: 1.2em;
 }
 
 #why--us--section {
@@ -1141,7 +860,7 @@ section {
   font-size: 3em;
   width: 320px;
   height: 200px;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 #why--us--section .why--us .why--us--box .why--us--box--p {
@@ -1173,11 +892,6 @@ section {
           align-items: center;
   -ms-flex-item-align: bottom;
       align-self: bottom;
-}
-
-#contact--form--section {
-  color: #f1ead4;
-  font-size: 2rem;
 }
 
 form {
@@ -1537,66 +1251,9 @@ footer a:any-link {
   z-index: 1;
 }
 
-footer a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-footer a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-footer a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 footer a:hover, footer a:active, footer a:focus {
   outline: none;
   color: #a67a62ff;
-}
-
-footer a:hover::after, footer a:active::after, footer a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 footer .footer__flex {
@@ -1703,9 +1360,9 @@ footer .footer__flex address {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 1em;
-  padding: 1em 1em 0;
-  margin: 1.6em auto 0;
+  gap: 0em;
+  padding: 1em 0.2em 0;
+  margin: 1em auto 0;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -1745,66 +1402,9 @@ footer .footer__flex address a:any-link {
   z-index: 1;
 }
 
-footer .footer__flex address a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-footer .footer__flex address a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-footer .footer__flex address a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 footer .footer__flex address a:hover, footer .footer__flex address a:active, footer .footer__flex address a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-footer .footer__flex address a:hover::after, footer .footer__flex address a:active::after, footer .footer__flex address a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 footer .footer__flex address ul {
@@ -1908,66 +1508,9 @@ img {
   z-index: 1;
 }
 
-.content a:-webkit-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.content a:-moz-any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.content a:any-link::after {
-  content: "";
-  position: absolute;
-  background: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
 .content a:hover, .content a:active, .content a:focus {
   outline: none;
   color: #eee6c6;
-}
-
-.content a:hover::after, .content a:active::after, .content a:focus::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
 }
 
 #sell--form--section .section--title {
@@ -1980,9 +1523,17 @@ img {
 }
 
 #sell--form--section .content form .form--header, #sell--form--section .content form .form--footer {
-  font-size: 2em;
+  font-size: 2rem;
   color: #2a283f;
-  margin: 0 auto;
+}
+
+@media screen and (max-width: 1916px) {
+  .why--us--box {
+    width: 500px;
+  }
+  .subtext {
+    font-size: 2.4em;
+  }
 }
 
 @media screen and (max-width: 1240px) {
@@ -2115,14 +1666,12 @@ img {
   #about--section .agents .agent .bio {
     width: 90%;
   }
-  footer h2 {
-    margin: -1em auto 0em;
+  #contact--form--section form {
+    padding: 0 0 1.8em;
+    width: 100%;
   }
-  footer h2 .footer__flex .footer__addresses .footer--card {
-    background: red;
-  }
-  .footer--card {
-    padding: 0;
+  #contact--form--section form .form--header, #contact--form--section form .form--footer {
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,12 @@
+@media screen and (max-width: 1916px) {
+  .why--us--box {
+    width: 500px;
+  }
+  .subtext {
+    font-size: 2.4em;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   #bottom--nav {
     display: none;
@@ -130,24 +139,28 @@
       width: 90%;
     }
   }
-
-  // .why--us--box--h3 {
-  //   font-size: 1em;
-  // }
-
-  footer {
-    h2 {
-      margin: -1em auto 0em;
-      .footer__flex {
-        .footer__addresses {
-          .footer--card {
-            background: red;
-          }
+  #why--us--section {
+    .why--us {
+      .why--us--box {
+        .why--us--box--h3 {
+        }
+        .why--us--box--p {
         }
       }
     }
   }
-  .footer--card {
-    padding: 0;
+
+  #contact--form--section {
+    form {
+      padding: 0 0 1.8em;
+      width: 100%;
+      .form--header {
+        padding-bottom: 0;
+      }
+    }
   }
+
+  // .why--us--box--h3 {
+  //   font-size: 1em;
+  // }
 }
